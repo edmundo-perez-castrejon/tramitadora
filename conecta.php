@@ -1,9 +1,12 @@
 <?php
 $db_connection = new COM("ADODB.Connection");
 
-$db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/Tramitadora2008.mde") ." ;DefaultDir=". realpath("../databases");
+$db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/Tramitadora 2008.mde") ." ;DefaultDir=". realpath("../databases");
 $db_connection->open($db_connstr);
-$rs = $db_connection->execute("SELECT * FROM CLIENTES");
+
+$rs = $db_connection->execute("SELECT * FROM [DATOS BUQUE]");
+
+
 
 $rs_fld0 = $rs->Fields(0);
 $rs_fld1 = $rs->Fields(1);

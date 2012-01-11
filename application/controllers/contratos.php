@@ -1,26 +1,47 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Contratos extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->library('session');
+
+        $this->load->model(array('contratos_model','clientes_model','buques_model','bodegas_model','destinos_model'));
+
+
+        $this->load->helper('url');
+
+        $this->session->set_userdata('cliente' , 'GA-1');
+    }
+
 	public function index()
 	{
-		$this->load->view('welcome_message');
+
+        #obtener los datos del cliente
+        $data_cliente = $this->clientes_model->get_datos($this->session->userdata('cliente'));
+
+        $data['nombre_cliente'] = $data_cliente['NOMBRE_CLIENTE'];
+        $data['lst_contratos'] = $this->contratos_model->get_contratos_by_cliente($this->session->userdata('cliente'));
+		$this->load->view('contratos',$data);
+
 	}
+
+    public function get_datos()
+    {
+        $cve_contrato = $this->uri->segment(3);
+        $datos_buque = $this->buques_model->get_datos($cve_contrato);
+        $datos_bodegas = $this->bodegas_model->get_datos($cve_contrato);
+
+        $datos_destinos = $this->destinos_model->get_datos($this->session->userdata('cliente'), $cve_contrato);
+
+
+        $data['datos_buque'] = $datos_buque;
+        $data['datos_bodegas'] = $datos_bodegas;
+        $data['datos_destinos'] = $datos_destinos;
+
+        $this->load->view('buques',$data);
+    }
 }
 
 /* End of file welcome.php */
