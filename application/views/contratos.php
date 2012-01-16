@@ -1,3 +1,4 @@
+
 <H1><?PHP echo $nombre_cliente;?> </H1>
     <h2>Contratos:</h2>
 <ul>
