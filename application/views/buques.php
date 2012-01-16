@@ -72,3 +72,7 @@ foreach($datos_destinos as $destino){
 
 ?>
     </ul>
+
+<?php
+echo anchor('auth/logout','Salir del sistema');
+?>

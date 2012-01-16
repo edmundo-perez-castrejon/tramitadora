@@ -5,27 +5,23 @@ class Contratos extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->library('session');
-        $this->load->library('salidas_lib');
-        $this->load->database();
+        $this->load->helper('url');
+        $this->load->library('ion_auth');
 
-        $this->load->model(array('contratos_model','clientes_model','buques_model','bodegas_model','destinos_model'));
-        $this->load->helper(array('url','form'));
+        if (!$this->ion_auth->logged_in())
+        {
+            //redirect them to the login page
+            redirect('auth/login', 'refresh');
+        }else{
+            $this->load->library('session');
+            $this->load->library('salidas_lib');
+            $this->load->model(array('contratos_model','clientes_model','buques_model','bodegas_model','destinos_model'));
+            $this->load->helper(array('url','form'));
+        }
     }
 
 	public function index()
 	{
-
-        $query = $this->db->query('SELECT username FROM users');
-
-        foreach ($query->result() as $row)
-        {
-            echo $row->username;
-            
-        }
-
-        echo 'Total Results: ' . $query->num_rows();
-
         $cve_cliente = $this->input->post('cve_cliente');
 
         if($cve_cliente == null){

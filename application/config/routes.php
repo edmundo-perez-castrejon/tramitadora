@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "contratos";
+$route['default_controller'] = "auth"; #contratos anteriormente
 $route['404_override'] = '';
 
 
