@@ -22,11 +22,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="login.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/auth/login.php">
+      <file leaf-file-name="admin.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="509" selection-end="509" vertical-scroll-proportion="0.5872727">
+            <state line="53" column="41" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.6163194">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listado_usuarios.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/listado_usuarios.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="claves.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/claves.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="9" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="claves_model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/claves_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="33" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/auth/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="4" selection-start="1032" selection-end="1161" vertical-scroll-proportion="-15.115385">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listado_claves.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/listado_claves.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="765" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/auth.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="44" selection-start="913" selection-end="913" vertical-scroll-proportion="-17.68">
+              <folding>
+                <element signature="n#__construct#0;n#Auth#0;n#!!top" expanded="false" />
+                <element signature="n#login#0;n#Auth#0;n#!!top" expanded="false" />
+                <element signature="n#logout#0;n#Auth#0;n#!!top" expanded="false" />
+                <element signature="n#change_password#0;n#Auth#0;n#!!top" expanded="false" />
+                <element signature="n#forgot_password#0;n#Auth#0;n#!!top" expanded="false" />
+                <element signature="n#reset_password#0;n#Auth#0;n#!!top" expanded="false" />
+                <element signature="n#activate#0;n#Auth#0;n#!!top" expanded="false" />
+                <element signature="n#deactivate#0;n#Auth#0;n#!!top" expanded="false" />
+                <element signature="n#_get_csrf_nonce#0;n#Auth#0;n#!!top" expanded="false" />
+                <element signature="n#_valid_csrf_nonce#0;n#Auth#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,22 +111,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/conecta.php" />
-        <option value="$PROJECT_DIR$/application/controllers/destinos.php" />
-        <option value="$PROJECT_DIR$/application/models/salidas_model.php" />
-        <option value="$PROJECT_DIR$/application/views/salidas.php" />
-        <option value="$PROJECT_DIR$/application/controllers/salidas.php" />
-        <option value="$PROJECT_DIR$/application/libraries/salidas_lib.php" />
-        <option value="$PROJECT_DIR$/application/views/contratos.php" />
-        <option value="$PROJECT_DIR$/application/views/frm_cambiacliente.php" />
-        <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/controllers/examples.php" />
+        <option value="$PROJECT_DIR$/application/views/example.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/config/ion_auth.php" />
+        <option value="$PROJECT_DIR$/application/views/auth/login.php" />
+        <option value="$PROJECT_DIR$/application/views/claves/listado.php4" />
+        <option value="$PROJECT_DIR$/application/views/claves/listado.php" />
+        <option value="$PROJECT_DIR$/application/config/grocery_crud.php" />
+        <option value="$PROJECT_DIR$/application/models/claves_access_model.php" />
+        <option value="$PROJECT_DIR$/application/libraries/claves_lib.php" />
         <option value="$PROJECT_DIR$/application/views/auth/index.php" />
         <option value="$PROJECT_DIR$/application/controllers/auth.php" />
-        <option value="$PROJECT_DIR$/application/views/buques.php" />
-        <option value="$PROJECT_DIR$/application/controllers/contratos.php" />
-        <option value="$PROJECT_DIR$/application/views/auth/login.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/listado_usuarios.php" />
+        <option value="$PROJECT_DIR$/application/controllers/claves.php" />
+        <option value="$PROJECT_DIR$/application/models/claves_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
       </list>
     </option>
   </component>
@@ -175,6 +240,64 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tramitadora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tramitadora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tramitadora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tramitadora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tramitadora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tramitadora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -234,14 +357,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="746" extended-state="6" />
+    <frame x="-4" y="-4" width="1374" height="746" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22078907" sideWeight="0.6705491" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2276176" sideWeight="0.6705491" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -250,9 +374,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -308,39 +431,32 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/destinos_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="28" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/salidas_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="42" selection-start="606" selection-end="628" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/bodegas_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="6" column="33" selection-start="184" selection-end="184" vertical-scroll-proportion="0.1811723">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/contratos_model.php">
+    <entry file="file://$PROJECT_DIR$/application/models/claves_access_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="25" selection-start="613" selection-end="613" vertical-scroll-proportion="0.60390764" />
+        <state line="20" column="30" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/frm_cambiacliente.php">
+    <entry file="file://$PROJECT_DIR$/application/libraries/claves_lib.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="2" selection-start="175" selection-end="175" vertical-scroll-proportion="0.17708333" />
+        <state line="42" column="31" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/contratos.php">
+    <entry file="file://$PROJECT_DIR$/application/libraries/salidas_lib.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="41" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.5902778" />
+        <state line="0" column="0" selection-start="0" selection-end="277" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/language/spanish/ion_auth_lang.php">
@@ -352,56 +468,95 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/ion_auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.5746527">
+        <state line="149" column="0" selection-start="3351" selection-end="3351" vertical-scroll-proportion="0.8229167">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+    <entry file="file://$PROJECT_DIR$/application/models/ion_auth_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="30" selection-start="2282" selection-end="2282" vertical-scroll-proportion="0.57894737">
+        <state line="1028" column="5" selection-start="22178" selection-end="22178" vertical-scroll-proportion="0.80669147">
+          <folding>
+            <element signature="n#__construct#0;n#Ion_auth_model#0;n#!!top" expanded="false" />
+            <element signature="n#hash_password#0;n#Ion_auth_model#0;n#!!top" expanded="false" />
+            <element signature="n#deactivate#0;n#Ion_auth_model#0;n#!!top" expanded="false" />
+            <element signature="n#change_password#0;n#Ion_auth_model#0;n#!!top" expanded="false" />
+            <element signature="n#username_check#0;n#Ion_auth_model#0;n#!!top" expanded="false" />
+            <element signature="n#email_check#0;n#Ion_auth_model#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/Ion_auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="214" column="8" selection-start="5864" selection-end="5864" vertical-scroll-proportion="0.6802974">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+    <entry file="file://$PROJECT_DIR$/application/views/auth/edit_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="63" selection-start="1457" selection-end="1457" vertical-scroll-proportion="0.6753472">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/auth/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="44" selection-start="917" selection-end="917" vertical-scroll-proportion="-17.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/buques.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/contratos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="35" selection-start="223" selection-end="223" vertical-scroll-proportion="0.20659722">
+        <state line="7" column="32" selection-start="182" selection-end="182" vertical-scroll-proportion="0.3380682">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="302" selection-end="329" vertical-scroll-proportion="0.3321492">
+        <state line="36" column="44" selection-start="913" selection-end="913" vertical-scroll-proportion="-17.68">
+          <folding>
+            <element signature="n#__construct#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#login#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#logout#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#change_password#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#forgot_password#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#reset_password#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#activate#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#deactivate#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#_get_csrf_nonce#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#_valid_csrf_nonce#0;n#Auth#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/listado_claves.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="765" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/auth/login.php">
+    <entry file="file://$PROJECT_DIR$/application/views/auth/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="509" selection-end="509" vertical-scroll-proportion="0.5872727">
+        <state line="39" column="4" selection-start="1032" selection-end="1161" vertical-scroll-proportion="-15.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/claves.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="9" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/claves_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="33" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/listado_usuarios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="41" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.6163194">
           <folding />
         </state>
       </provider>

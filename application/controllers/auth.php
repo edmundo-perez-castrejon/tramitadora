@@ -10,7 +10,10 @@ class Auth extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->database();
 		$this->load->helper('url');
-	}
+
+        $this->load->database();
+        $this->load->library('grocery_CRUD');
+    }
 
 	//redirect if needed, otherwise display the user list
 	function index()
@@ -28,20 +31,15 @@ class Auth extends CI_Controller {
 		}
 		else
 		{
+
 			//set the flash data error message if there is one
 			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+            redirect('admin/grocery_usuarios');
 
-			//list the users
-			$this->data['users'] = $this->ion_auth->users()->result();
-			foreach ($this->data['users'] as $k => $user)
-			{
-				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
-			}
-	
-			
-			$this->load->view('auth/index', $this->data);
 		}
 	}
+
+
 
 	//log the user in
 	function login()

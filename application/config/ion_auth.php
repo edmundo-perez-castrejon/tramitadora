@@ -56,12 +56,12 @@
 	 * A database column which is used to
 	 * login with.
 	 **/
-	$config['identity']            = 'email';
+	$config['identity']            = 'username';
 		 
 	/**
 	 * Minimum Required Length of Password
 	 **/
-	$config['min_password_length'] = 8;
+	$config['min_password_length'] = 4;
 	
 	/**
 	 * Maximum Allowed Length of Password
@@ -76,7 +76,7 @@
 	/**
 	 * Allow users to be remembered and enable auto-login
 	 **/
-	$config['remember_users']      = true;
+	$config['remember_users']      = false;
 	
 	/**
 	 * How long to remember the user (seconds)
