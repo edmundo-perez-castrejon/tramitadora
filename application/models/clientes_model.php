@@ -7,6 +7,7 @@ Class Clientes_model extends CI_Model
     public function __construct()
     {
         parent::__construct();
+        $this->load->database();
         $this->db_connection = new COM("ADODB.Connection");
 
         $db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/Tramitadora 2008.mde") ." ;DefaultDir=". realpath("../databases");
@@ -16,6 +17,22 @@ Class Clientes_model extends CI_Model
     public function __destruct()
     {
         $this->db_connection->Close();
+    }
+
+    public function get_claves($id_usuario)
+    {
+        $query = $this->db->query("SELECT clave
+                                    FROM `claves_users`
+                                    LEFT JOIN claves ON `claves_users`.id_clave = claves.id_clave
+                                    WHERE id = ".$id_usuario);
+        $lst_claves = array();
+        foreach ($query->result() as $row)
+        {
+            $lst_claves[] = $row->clave;
+
+        }
+
+        return $lst_claves;
     }
 
     public function get_datos($clave_cliente = '')

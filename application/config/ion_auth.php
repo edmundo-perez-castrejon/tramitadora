@@ -124,7 +124,16 @@
 	 * fbaa5e216d163a02ae630ab1a43372635dd374c0 with default salt.
 	 **/
 	$config['store_salt'] = false;
-	
+
+
+    /**
+     * Encrypt password when login?
+     * If TRUE the password will be encrypted and checked against bd
+     * If FALSE the password will be plain checked against db
+     */
+
+    $config['encrypt_password_when_login'] = FALSE;
+
 	/**
 	 * Message Start Delimiter
 	 **/

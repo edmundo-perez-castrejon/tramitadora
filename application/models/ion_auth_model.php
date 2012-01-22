@@ -673,7 +673,10 @@ class Ion_auth_model extends CI_Model
 
 		if ($query->num_rows() == 1)
 		{
-			$password = $this->hash_password_db($user->id, $password);
+
+            if($this->config->item('encrypt_password_when_login',TRUE)){
+                $password = $this->hash_password_db($user->id, $password);
+            }
 
 			if ($user->password === $password)
 			{

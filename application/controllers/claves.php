@@ -27,10 +27,11 @@ class Claves extends CI_Controller {
         $this->claves_lib->sincroniza();
 
         $crud = new grocery_CRUD();
-
+        $crud->set_table('claves');
         $crud->unset_columns('id');
         $output = $crud->render();
         $this->load->view('admin/listado_claves', $output);
+
     }
 }
 

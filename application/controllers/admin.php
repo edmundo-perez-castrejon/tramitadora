@@ -46,7 +46,14 @@ class Admin extends CI_Controller {
         $crud->set_table('users');
         $crud->set_relation_n_n('claves','claves_users','claves','id','id_clave','clave');
 
-        $crud->columns('username','email','active','first_name','last_name','Company','Phone','claves');
+
+        $crud->columns('username','email','password','active','first_name','last_name','claves');
+
+        $crud->fields('username','email','password','active','first_name','last_name','claves');
+
+        $crud->change_field_type('password','password');
+
+
         $crud->display_as('username','Nombre de usuario')
             ->display_as('email','Correo Electronico')
             ->display_as('first_name','Nombre')

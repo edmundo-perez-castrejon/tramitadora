@@ -23,7 +23,7 @@
                 <?php
                 foreach($datos_bodegas as $nobodega=>$cantidad)
                 {
-                    $peso_total_bodega =$this->salidas_lib->get_peso_total_bodega($this->session->userdata('cliente'),  $datos_buque['CONTRATO'], $nobodega);
+                    $peso_total_bodega =$this->salidas_lib->get_peso_total_bodega($cve_cliente,  $datos_buque['CONTRATO'], $nobodega);
                     $diferencia_peso = $cantidad-$peso_total_bodega;
 
                     $porciento_dif = 0;

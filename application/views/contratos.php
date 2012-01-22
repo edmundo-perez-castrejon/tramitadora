@@ -3,10 +3,11 @@
     <h2>Contratos:</h2>
 <ul>
     <?php
-    foreach($lst_contratos as $contrato)
+    foreach($lst_contratos as $usr =>$contrato)
     {
+
         ?><li>
-        <?php echo anchor('contratos/get_datos/'.$contrato, $contrato);?>
+        <?php echo anchor('contratos/get_datos/'.current($contrato).'/'.key($contrato), current($contrato).'/'.key($contrato));?>
         </li>
         <?php
     }

@@ -13,8 +13,6 @@ class Salidas extends CI_Controller {
         $this->load->model(array('salidas_model'));
 
         $this->load->helper('url');
-
-        $this->session->set_userdata('cliente' , 'GA-1');
     }
 
 

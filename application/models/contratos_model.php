@@ -25,10 +25,11 @@ Class Contratos_model extends CI_Model
         if($clave_cliente<>''){
             $rs = $this->db_connection->execute("SELECT * FROM CLIENTES WHERE CLAVE_CLIENTE = '$clave_cliente'");
 
+            $rs_fld0 = $rs->Fields(0); #Clave del contrato del cliente
             $rs_fld1 = $rs->Fields(1); #Clave del contrato del cliente
 
             while (!$rs->EOF) {
-                $Array_result[] = $rs_fld1->value;
+                $Array_result[$rs_fld0->value] = $rs_fld1->value;
                 $rs->MoveNext();
             }
 
