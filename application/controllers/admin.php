@@ -47,26 +47,24 @@ class Admin extends CI_Controller {
         $crud->set_relation_n_n('claves','claves_users','claves','id','id_clave','clave');
 
 
-        $crud->columns('username','email','password','active','first_name','last_name','claves');
+        $crud->columns('username','email','active','first_name','last_name','claves');
 
-        $crud->fields('username','email','password','active','first_name','last_name','claves');
+        $crud->fields('username','password','email','active','first_name','last_name','claves');
 
         $crud->change_field_type('password','password');
-
 
         $crud->display_as('username','Nombre de usuario')
             ->display_as('email','Correo Electronico')
             ->display_as('first_name','Nombre')
             ->display_as('last_name','Apellidos');
-        /*$crud->set_subject('Customer');
-        $crud->set_relation('salesRepEmployeeNumber','employees','{lastName} {firstName}');
-
-        */
 
         $output = $crud->render();
         $this->load->view('admin/listado_usuarios',$output);
     }
+
+
 }
+
 
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */

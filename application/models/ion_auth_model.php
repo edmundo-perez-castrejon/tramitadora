@@ -232,7 +232,7 @@ class Ion_auth_model extends CI_Model
 			return FALSE;
 		}
 
-		if ($this->store_salt)
+    	if ($this->store_salt)
 		{
 			return sha1($password . $hash_password_db->salt);
 		}
@@ -242,6 +242,8 @@ class Ion_auth_model extends CI_Model
 
 			return $salt . substr(sha1($salt . $password), 0, -$this->salt_length);
 		}
+
+
 	}
 
 	/**
@@ -253,6 +255,7 @@ class Ion_auth_model extends CI_Model
 	public function salt()
 	{
 		return substr(md5(uniqid(rand(), true)), 0, $this->salt_length);
+
 	}
 
 	/**
@@ -674,9 +677,9 @@ class Ion_auth_model extends CI_Model
 		if ($query->num_rows() == 1)
 		{
 
-            if($this->config->item('encrypt_password_when_login',TRUE)){
-                $password = $this->hash_password_db($user->id, $password);
-            }
+
+            #$password = $this->hash_password_db($user->id, $password);
+
 
 			if ($user->password === $password)
 			{

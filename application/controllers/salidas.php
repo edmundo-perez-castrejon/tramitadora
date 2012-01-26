@@ -9,7 +9,7 @@ class Salidas extends CI_Controller {
     {
         parent::__construct();
         $this->load->library(array('session','salidas_lib'));
-
+        $this->load->library('grocery_CRUD');
         $this->load->model(array('salidas_model'));
 
         $this->load->helper('url');
@@ -27,10 +27,11 @@ class Salidas extends CI_Controller {
         $lst_detalle_bodegas = $this->salidas_model->get_salidas_por_bodega($this->cve_destino);
         $data['lst_detalle_bodegas'] = $lst_detalle_bodegas;
 
+
+
+
         $this->load->view('salidas',$data);
     }
-
-
 }
 
 /* End of file welcome.php */
