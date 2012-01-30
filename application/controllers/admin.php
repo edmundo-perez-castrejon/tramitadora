@@ -59,7 +59,9 @@ class Admin extends CI_Controller {
             ->display_as('last_name','Apellidos');
 
         $output = $crud->render();
+        $this->load->view('template/header',$output);
         $this->load->view('admin/listado_usuarios',$output);
+        #$this->load->view('template/footer');
     }
 
 

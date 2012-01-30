@@ -43,7 +43,9 @@ class Contratos extends CI_Controller {
             }
             $data['lst_contratos'] = $lst_contratos;
 
+            $this->load->view('template/header');
             $this->load->view('contratos',$data);
+            $this->load->view('template/footer');
         }else{
             echo 'Ese cliente no es valido';
         }
@@ -52,20 +54,52 @@ class Contratos extends CI_Controller {
 
     public function get_datos()
     {
-        $cve_contrato = $this->uri->segment(3);
-        $cve_cliente = $this->uri->segment(4);
+
+        if($cve_contrato = $this->uri->segment(3))
+        {
+            $this->session->set_userdata('cve_contrato',$cve_contrato);
+        }else{
+            $cve_contrato = $this->session->userdata('cve_contrato');
+        }
+
+        if($cve_cliente = $this->uri->segment(4))
+        {
+            $this->session->set_userdata('cve_cliente',$cve_cliente);
+        }else{
+            $cve_cliente = $this->session->userdata('cve_cliente');
+        }
+
+
 
         $datos_buque = $this->buques_model->get_datos($cve_contrato);
         $datos_bodegas = $this->bodegas_model->get_datos($cve_contrato);
 
-        $datos_destinos = $this->destinos_model->get_datos($cve_cliente, $cve_contrato);
-
         $data['datos_buque'] = $datos_buque;
         $data['datos_bodegas'] = $datos_bodegas;
-        $data['datos_destinos'] = $datos_destinos;
-        $data['cve_cliente'] = $cve_cliente;
 
+        $data['cve_cliente'] = $cve_cliente;
+        $data['cve_contrato'] = $cve_contrato;
+
+        $this->load->view('template/header');
         $this->load->view('buques',$data);
+        $this->load->view('template/footer');
+    }
+
+    public function get_destinos()
+    {
+        $cve_contrato = $this->session->userdata('cve_contrato');
+        $cve_cliente = $this->session->userdata('cve_cliente');
+
+        $datos_buque = $this->buques_model->get_datos($cve_contrato);
+
+        $datos_destinos = $this->destinos_model->get_datos($cve_cliente, $cve_contrato);
+
+        $data['datos_destinos'] = $datos_destinos;
+        $data['datos_buque'] = $datos_buque;
+
+        $this->load->view('template/header');
+        $this->load->view('destinos',$data);
+        $this->load->view('template/footer');
     }
 }
 

@@ -30,7 +30,11 @@ class Claves extends CI_Controller {
         $crud->set_table('claves');
         $crud->unset_columns('id');
         $output = $crud->render();
+
+        $this->load->view('template/header',$output);
         $this->load->view('admin/listado_claves', $output);
+        $this->load->view('template/footer');
+
 
     }
 }

@@ -1,23 +1,41 @@
-<h1>Contrato <?php echo $datos_buque['CONTRATO']; ?></h1>
-<h2>Buque <?php echo $datos_buque['BUQUE']; ?> Proveedor <?php echo $datos_buque['NOMBRE_PROVEEDOR'];?></h2>
-<h2> Producto <?php echo $datos_buque['NOMBRE_PRODUCTO']; ?></h2>
-    <hr>
-        <h2>Bodegas</h2>
-            <table border="1">
+<div class="container-fluid">
+    <div class="sidebar" style="width:150px;">
+        <div class="well">
+            <h5>Destinos</h5>
+            <ul>
+                <li><?php echo anchor('contratos/get_destinos','Ver detalle');?></li>
+            </ul>
+            <h5>Reportes</h5>
+            <ul>
+                <li><a href="#">Reporte 1</a></li>
+                <li><a href="#">Reporte 2</a></li>
+                <li><a href="#">Reporte 3</a></li>
+                <li><a href="#">Reporte 4</a></li>
+                <li><a href="#">Reporte 5</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content" style="margin-left: 160px;">
+        <div class="hero-unit">
+            <h1>Contrato <?php echo $datos_buque['CONTRATO']; ?></h1>
+            <h3>Buque <?php echo $datos_buque['BUQUE']; ?> Proveedor <?php echo $datos_buque['NOMBRE_PROVEEDOR'];?></h3>
+            <h3> Producto <?php echo $datos_buque['NOMBRE_PRODUCTO']; ?></h3>
+
+
+            <table style="width:100%; font-size: 11px; padding: 0; border-collapse: collapse;">
                 <tr>
-                    <td><strong>Bodega</strong></td>
-                    <td><strong>Cantidad</strong></td>
-                    <td><strong>Salidas</strong></td>
-                    <td><strong>---</strong></td>
-                    <td>
-                    <table width="500">
-                        <tr>
-                            <td WIDTH="25%" align="right">25%|</td>
-                            <td WIDTH="25%" align="right">50%|</td>
-                            <td WIDTH="25%" align="right">75%|</td>
-                            <td WIDTH="25%" align="right">100%|</td>
-                        </tr>
-                    </table>
+                    <td width="40px"><strong>Bodega</strong></td>
+                    <td width="50px"><strong>Cantidad</strong></td>
+                    <td width="50px"><strong>Salidas</strong></td>
+                    <td width="40px"><strong>Restante</strong></td>
+                    <td style="line-height:5px; font-size: 15px; color: #dcdcdc;">
+                       <?php
+                        for($i=0;$i<100;$i++)
+                        {
+                            echo '|';
+                        }
+                        ?>
+
                     </td>
                 </tr>
                 <?php
@@ -32,47 +50,45 @@
                     }
 
                     echo '<tr>';
-                    echo '<td>'.$nobodega.'</td>';
-                    echo '<td>'.$cantidad.'</td>';
-                    echo '<td>'.$peso_total_bodega.'</td>';
+                    echo '<td style="line-height:5px;">'.$nobodega.'</td>';
+                    echo '<td style="line-height:5px;">'.$cantidad.'</td>';
+                    echo '<td style="line-height:5px;">'.$peso_total_bodega.'</td>';
 
-                    if(round($porciento_dif,2)>100){
-                        echo '<td bgcolor="green"> ';
-                    }else{
-                        echo '<td>';
+                    $bgcolor = "white";
+
+                    if(round($porciento_dif,2) > 30){
+                        $bgcolor = "#F2F2F2";
                     }
-                    echo round($porciento_dif,2).'%</td>';
 
-                    $ancho_celda = $porciento_dif * 5;
-                    echo '<td>';
-                    echo '<table width="'.$ancho_celda.'"><tr><td bgcolor="gray">&nbsp;</td></tr></table>';
+                    if(round($porciento_dif,2) > 50){
+                        $bgcolor = "#A9D0F5";
+                    }
+
+                    if(round($porciento_dif,2) > 70){
+                        $bgcolor = "#81F7BE";
+                    }
+
+                    if(round($porciento_dif,2) > 99){
+                        $bgcolor = "#ACFA58";
+                    }
+
+                    echo '<td bgcolor='.$bgcolor.' style="line-height:5px;">';
+                    echo 100-round($porciento_dif,2).'%</td>';
+
+                    echo '<td  style="line-height:5px; font-size: 15px;">';
+                    #echo '<table style="width:'.$ancho_celda.'px;" ><tr><td bgcolor="gray">&nbsp;</td></tr></table>';
+                    for($i=0;$i<100-round($porciento_dif,2);$i++)
+                    {
+                        echo '|';
+                    }
                     echo '</td>';
                     echo '</tr>';
                 }
                 ?>
             </table>
-<hr>
 
-<h2>Destinos</h2>
+            <!-- <p><a class="btn primary large">Destinos &raquo;</a></p> -->
+        </div>
 
-    <ul>
-<?php
-
-foreach($datos_destinos as $destino){
-    ?><li><?php
-    echo $destino['NOMBRE_DESTINO'];
-    echo ', Maxima captura: ';
-    echo $destino['MAXIMA_CAPTURA'];
-    echo ', Ordenado: ';
-    echo $destino['ORDENADO'];
-    echo ', TOTAL SALIDAS:'.$this->salidas_lib->get_peso_total($destino['CLAVE_DESTINO']);
-    echo anchor('salidas/info_salidas/'.$destino['CLAVE_DESTINO'],' Ver salidas');
-
-}
-
-?>
-    </ul>
-
-<?php
-echo anchor('auth/logout','Salir del sistema');
-?>
+        </div>
+</div>

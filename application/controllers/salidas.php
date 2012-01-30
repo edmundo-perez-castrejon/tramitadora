@@ -8,11 +8,22 @@ class Salidas extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->library(array('session','salidas_lib'));
-        $this->load->library('grocery_CRUD');
-        $this->load->model(array('salidas_model'));
 
         $this->load->helper('url');
+        $this->load->library('ion_auth');
+
+        if (!$this->ion_auth->logged_in())
+        {
+            //redirect them to the login page
+            redirect('auth/login', 'refresh');
+        }else{
+            $this->load->library('grocery_CRUD');
+            $this->load->model(array('salidas_model'));
+            $this->load->library(array('session','salidas_lib'));
+        }
+
+
+
     }
 
 
@@ -29,8 +40,9 @@ class Salidas extends CI_Controller {
 
 
 
-
+        $this->load->view('template/header');
         $this->load->view('salidas',$data);
+        $this->load->view('template/footer');
     }
 }
 
