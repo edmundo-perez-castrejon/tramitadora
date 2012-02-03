@@ -10,10 +10,11 @@
             <thead>
                 <tr>
                     <th width="350">Destino</th>
-                    <th width="200">Maxima captura</th>
+                    <th width="150">Maxima captura</th>
                     <th width="150">Ordenado</th>
                     <th width="150">Total de salidas</th>
-                    <th width="100">---</th>
+                    <th width="150">Diferencia</th>
+
 
                 </tr>
             </thead>
@@ -21,13 +22,15 @@
             <?php
 
             foreach($datos_destinos as $destino){
+                $total_de_salidas = $this->salidas_lib->get_peso_total($destino['CLAVE_DESTINO']);
                 ?>
                 <tr>
-                    <td><?php echo $destino['NOMBRE_DESTINO']; ?></td>
+                    <td><?php echo anchor('salidas/info_salidas/'.$destino['CLAVE_DESTINO'],$destino['NOMBRE_DESTINO']); ?></td>
                     <td><?php echo $destino['MAXIMA_CAPTURA']; ?></td>
                     <td><?php echo $destino['ORDENADO']; ?></td>
-                    <td><?php echo $this->salidas_lib->get_peso_total($destino['CLAVE_DESTINO']);?></td>
-                    <td><?php echo anchor('salidas/info_salidas/'.$destino['CLAVE_DESTINO'],' Ver salidas');?></td>
+                    <td><?php echo $total_de_salidas;?></td>
+                    <td><?php echo $destino['ORDENADO']-$total_de_salidas;?></td>
+
                 </tr>
                 <?php
             }

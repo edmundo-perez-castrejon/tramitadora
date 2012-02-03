@@ -101,6 +101,17 @@ class Contratos extends CI_Controller {
         $this->load->view('destinos',$data);
         $this->load->view('template/footer');
     }
+
+    public function generapdf()
+    {
+
+            $this->load->helper(array('dompdf', 'file'));
+            // page info here, db calls, etc.
+            $data['algo'] = 'algo';
+            $html = $this->load->view('reportes/dompdf_viewexample', $data, true);
+            pdf_create($html, 'filename');
+
+    }
 }
 
 /* End of file welcome.php */

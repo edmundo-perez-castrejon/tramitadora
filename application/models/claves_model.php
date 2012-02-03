@@ -24,7 +24,7 @@ Class Claves_model extends CI_Model
 
     public function nueva($data)
     {
-        if($this->db->insert('claves_usuarios', $data))
+        if($this->db->insert('claves', $data))
         {
             return TRUE;
         }else{

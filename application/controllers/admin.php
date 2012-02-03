@@ -61,7 +61,7 @@ class Admin extends CI_Controller {
         $output = $crud->render();
         $this->load->view('template/header',$output);
         $this->load->view('admin/listado_usuarios',$output);
-        #$this->load->view('template/footer');
+        $this->load->view('template/footer');
     }
 
 

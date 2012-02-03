@@ -28,6 +28,7 @@ Class Claves_access_model extends CI_Model
 
         $rs_fld0 = $rs->Fields(0);
 
+
         while (!$rs->EOF) {
             #array_result['bodega1'] = 'cantidad de la bodega 1'
             $Array_result[] = $rs_fld0->value;

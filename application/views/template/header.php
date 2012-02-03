@@ -14,13 +14,16 @@
         <?php foreach($js_files as $file): ?>
         <script src="<?php echo $file; ?>"></script>
         <?php endforeach;
+    else:
+        ?>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/flexigrid-1.1/css/flexigrid.pack.css" />
+        <script type="text/javascript" src="<?php echo base_url();?>assets/jquery/jquery-1.5.2.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url();?>assets/flexigrid-1.1/js/flexigrid.pack.js"></script>
+        <?php
     endif;
     ?>
 
 
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/flexigrid-1.1/css/flexigrid.pack.css" />
-    <script type="text/javascript" src="<?php echo base_url();?>assets/jquery/jquery-1.5.2.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/flexigrid-1.1/js/flexigrid.pack.js"></script>
 
 
     <style type='text/css'>
@@ -117,7 +120,7 @@
                 {
                     echo anchor('contratos/get_datos',$this->session->userData('cve_contrato'),array('class'=>'brand'));
                 }else{
-                    echo 'Tramitadora 2012';
+                    echo anchor('#','Tramitadora 2012',array('class'=>'brand'));
                 }
             ?>
 </a>
