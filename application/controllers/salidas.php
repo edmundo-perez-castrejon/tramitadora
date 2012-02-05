@@ -21,9 +21,6 @@ class Salidas extends CI_Controller {
             $this->load->model(array('salidas_model'));
             $this->load->library(array('session','salidas_lib'));
         }
-
-
-
     }
 
 

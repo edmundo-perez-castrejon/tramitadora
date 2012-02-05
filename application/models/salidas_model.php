@@ -9,7 +9,7 @@ Class Salidas_model extends CI_Model
         parent::__construct();
         $this->db_connection = new COM("ADODB.Connection");
 
-        $db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/Tramitadora 2008.mde") ." ;DefaultDir=". realpath("../databases");
+        $db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/Dropbox/Trabajo/Tramitadora 2008.mde") ." ;DefaultDir=". realpath("../databases/Dropbox/Trabajo");
         $this->db_connection->open($db_connstr);
     }
 
@@ -50,7 +50,7 @@ Class Salidas_model extends CI_Model
 
     public function get_datos($cve_destino = '')
     {
-        $CadenaSQL = "SELECT * FROM SALIDAS WHERE DESTINO_SALIDA = '$cve_destino'";
+        $CadenaSQL = "SELECT * FROM SALIDAS WHERE DESTINO_SALIDA = '$cve_destino' ORDER BY FECHA";
 
         $Array_result = array();
 

@@ -70,7 +70,6 @@ class Contratos extends CI_Controller {
         }
 
 
-
         $datos_buque = $this->buques_model->get_datos($cve_contrato);
         $datos_bodegas = $this->bodegas_model->get_datos($cve_contrato);
 
@@ -102,16 +101,6 @@ class Contratos extends CI_Controller {
         $this->load->view('template/footer');
     }
 
-    public function generapdf()
-    {
-
-            $this->load->helper(array('dompdf', 'file'));
-            // page info here, db calls, etc.
-            $data['algo'] = 'algo';
-            $html = $this->load->view('reportes/dompdf_viewexample', $data, true);
-            pdf_create($html, 'filename');
-
-    }
 }
 
 /* End of file welcome.php */

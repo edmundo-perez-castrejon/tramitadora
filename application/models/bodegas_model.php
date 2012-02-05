@@ -9,7 +9,7 @@ Class Bodegas_model extends CI_Model
         parent::__construct();
         $this->db_connection = new COM("ADODB.Connection");
 
-        $db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/Tramitadora 2008.mde") ." ;DefaultDir=". realpath("../databases");
+        $db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/Dropbox/Trabajo/Tramitadora 2008.mde") ." ;DefaultDir=". realpath("../databases/Dropbox/Trabajo");
         $this->db_connection->open($db_connstr);
     }
 
@@ -24,7 +24,8 @@ Class Bodegas_model extends CI_Model
         $Array_result = array();
 
         if($cve_contrato<>''){
-            $rs = $this->db_connection->execute("SELECT * FROM bodegas WHERE CONTRATO_BODEGAS = '$cve_contrato'");
+            $rs = $this->db_connection->execute("SELECT * FROM bodegas WHERE CONTRATO_BODEGAS = '$cve_contrato'
+                                                   ORDER BY BODEGA ");
 
 #            $rs_fld0 = $rs->Fields(0);
             $rs_fld1 = $rs->Fields(1);

@@ -36,10 +36,11 @@
             </ul>
             <h5>Reportes</h5>
             <ul>
-                <li><?php echo anchor('contratos/generapdf','Movs. por Bodega');?></li>
-                <li><a href="#">Det. de envios</a></li>
-                <li><a href="#">Det. de transporte</a></li>
-                <li><a href="#">Det. de destinos</a></li>
+                <li><?php echo anchor('reportes/mov_por_bodega','Movs. por Bodega');?></li>
+                <li><?php echo anchor('reportes/det_envios','Det. de Envios');?></li>
+                <li><?php echo anchor('reportes/det_destinos','Det. de Destinos');?></li>
+                <li><?php echo anchor('reportes/det_transportes','Det. de Transporte');?></li>
+
             </ul>
         </div>
 
@@ -149,5 +150,5 @@
 </div>
 
 <script type="text/javascript">
-        timedRefresh(15000);
+        timedRefresh(6000);
 </script>

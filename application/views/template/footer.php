@@ -2,7 +2,7 @@
 </div>
 
 <footer>
-    <p>&copy; @ingedmundo 2012</p>
+    <p>&copy; TRAMITADORA DEL PACIFICO S.A DE C.V.</p>
 </footer>
 
 </div> <!-- /container -->
