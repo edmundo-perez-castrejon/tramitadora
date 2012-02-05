@@ -2,6 +2,8 @@
 
 class Contratos extends CI_Controller {
 
+    private $user = null;
+
     public function __construct()
     {
         parent::__construct();
@@ -16,8 +18,16 @@ class Contratos extends CI_Controller {
         }else{
             $this->load->library('session');
             $this->load->library('salidas_lib');
-            $this->load->model(array('contratos_model','clientes_model','buques_model','bodegas_model','destinos_model'));
+            $this->load->model(array('contratos_model','clientes_model','buques_model','bodegas_model','destinos_model','empresas_model'));
             $this->load->helper(array('url','form'));
+
+            $this->user = $this->ion_auth->user()->row();
+
+            if($datos_empresa = $this->empresas_model->get_datos_empresa($this->user->id_empresa))
+            {
+                $this->session->set_userdata('nombre_empresa', $datos_empresa->nombre);
+                $this->session->set_userdata('imagen_empresa', base_url().'images/empresas/'.$datos_empresa->imagen);
+            }
         }
     }
 
@@ -33,8 +43,10 @@ class Contratos extends CI_Controller {
         $data_cliente = $this->clientes_model->get_datos($cve_cliente);
 
 
+
         if(count($data_cliente)>0){
-            $data['nombre_cliente'] = $data_cliente['NOMBRE_CLIENTE'];
+
+            $data['nombre_cliente'] = $this->user->first_name.' '.$this->user->last_name;
 
             $lst_contratos = array();
             foreach($cves_cliente as $cve_cliente)
@@ -69,6 +81,12 @@ class Contratos extends CI_Controller {
             $cve_cliente = $this->session->userdata('cve_cliente');
         }
 
+        $imagen_buque = $this->contratos_model->get_imagen_contrato($cve_contrato);
+
+        if($imagen_buque)
+        {
+            $data['imagen_buque'] = base_url().'images/contratos/'.$imagen_buque->imagen;
+        }
 
         $datos_buque = $this->buques_model->get_datos($cve_contrato);
         $datos_bodegas = $this->bodegas_model->get_datos($cve_contrato);

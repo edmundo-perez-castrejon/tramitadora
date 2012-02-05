@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Tramitadora 2012 by ingedmundo</title>
+    <title>WebFrontEnd 2012</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -120,7 +120,7 @@
                 {
                     echo anchor('contratos/get_datos',$this->session->userData('cve_contrato'),array('class'=>'brand'));
                 }else{
-                    echo anchor('#','Tramitadora 2012',array('class'=>'brand'));
+                    echo anchor('#','WebFrontEnd 2012',array('class'=>'brand'));
                 }
             ?>
 </a>
@@ -128,22 +128,33 @@
                 <li class="active">
                     <?php
                     if($this->ion_auth->is_admin()){
-                        echo anchor('admin/grocery_usuarios','Listado de usuarios');
+                        echo anchor('admin/grocery_usuarios','Usuarios');
                     }else{
                         echo anchor('contratos','Contratos');
                     }
                     ?>
                 </li>
+                <?php
+                    if($this->ion_auth->is_admin()):
+                        ?>
+                        <li>
+                            <?php echo anchor('claves/claves_usuarios','Claves'); ?>
+                        </li>
 
-                <li>
-                    <?php
-                    if($this->ion_auth->is_admin()){
-                        echo anchor('claves/claves_usuarios','Catálogo de claves');
-                    }
-                    ?>
+                        <li>
+                            <?php echo anchor('admin/configuracion','Configuracion'); ?>
+                        </li>
+                        <li>
+                            <?php echo anchor('admin/imagenes_contratos','Imagenes');?>
+                        </li>
+                        <li>
+                            <?php echo anchor('admin/empresas','Empresas');?>
+                        </li>
+                        <?php
+                    endif;
+                ?>
 
-                </li>
-                <li><?php echo anchor('auth/logout','Salir del sistema');?></li>
+                <li><?php echo anchor('auth/logout','Salir');?></li>
             </ul>
             <p class="pull-right">Sesión iniciada como <a href="#"><?php echo $this->session->userdata('username'); ?></a></p>
 

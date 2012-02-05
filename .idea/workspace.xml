@@ -22,48 +22,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="det_transportes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/reportes/det_transportes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="82" selection-start="2673" selection-end="2673" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reportes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/reportes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="31" selection-start="3318" selection-end="3318" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1328399906479" expanded="true" signature="3631:3666" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="salidas_model.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/models/salidas_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="96" selection-start="1613" selection-end="1613" vertical-scroll-proportion="0.5737122">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="contratos.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/contratos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="44" selection-start="2282" selection-end="2282" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="det_destinos.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/reportes/det_destinos.php">
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/template/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="2" selection-start="2704" selection-end="2704" vertical-scroll-proportion="-47.076923">
+            <state line="4" column="11" selection-start="78" selection-end="78" vertical-scroll-proportion="-2.6153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="buques.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/buques.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="42" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.41154563">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/template/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="73" selection-start="54" selection-end="119" vertical-scroll-proportion="-3.9230769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="empresas_model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/empresas_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,22 +82,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/controllers/salidas.php" />
-        <option value="$PROJECT_DIR$/application/views/destinos.php" />
-        <option value="$PROJECT_DIR$/application/views/reportes/det_envios.php" />
-        <option value="$PROJECT_DIR$/application/views/reportes/det_destinos.php" />
-        <option value="$PROJECT_DIR$/application/models/claves_access_model.php" />
-        <option value="$PROJECT_DIR$/application/models/clientes_model.php" />
-        <option value="$PROJECT_DIR$/application/models/buques_model.php" />
-        <option value="$PROJECT_DIR$/application/models/contratos_model.php" />
-        <option value="$PROJECT_DIR$/application/models/bodegas_model.php" />
-        <option value="$PROJECT_DIR$/application/models/destinos_model.php" />
-        <option value="$PROJECT_DIR$/application/views/template/footer.php" />
-        <option value="$PROJECT_DIR$/application/views/auth/login.php" />
-        <option value="$PROJECT_DIR$/application/views/buques.php" />
         <option value="$PROJECT_DIR$/application/controllers/reportes.php" />
         <option value="$PROJECT_DIR$/application/views/reportes/det_transportes.php" />
         <option value="$PROJECT_DIR$/application/models/salidas_model.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/configuracion.php" />
+        <option value="$PROJECT_DIR$/application/models/configuracion_model.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/imagenes_contratos.php" />
+        <option value="$PROJECT_DIR$/application/models/contratos_model.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/empresas.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
+        <option value="$PROJECT_DIR$/application/views/template/header.php" />
+        <option value="$PROJECT_DIR$/application/views/auth/login.php" />
+        <option value="$PROJECT_DIR$/application/controllers/auth.php" />
+        <option value="$PROJECT_DIR$/application/models/empresas_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/contratos.php" />
+        <option value="$PROJECT_DIR$/application/views/template/footer.php" />
+        <option value="$PROJECT_DIR$/application/views/buques.php" />
       </list>
     </option>
   </component>
@@ -141,6 +139,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -205,31 +204,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tramitadora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tramitadora" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,7 +298,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21623673" sideWeight="0.6705491" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22382398" sideWeight="0.6705491" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -323,7 +307,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3294509" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -381,106 +365,106 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/buques_model.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/listado_usuarios.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="111" selection-start="396" selection-end="396" vertical-scroll-proportion="0.4383057" />
+        <state line="10" column="6" selection-start="0" selection-end="167" vertical-scroll-proportion="-6.5384617" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/ion_auth_model.php">
+    <entry file="file://$PROJECT_DIR$/application/config/ion_auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="117" column="32" selection-start="2671" selection-end="2671" vertical-scroll-proportion="2.4982014" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/contratos_model.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/imagenes_contratos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="111" selection-start="396" selection-end="396" vertical-scroll-proportion="0.3321492" />
+        <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/destinos_model.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/empresas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="111" selection-start="395" selection-end="395" vertical-scroll-proportion="0.060390763" />
+        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/auth/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="18" selection-start="4226" selection-end="4226" vertical-scroll-proportion="0.58845437">
+        <state line="80" column="49" selection-start="2803" selection-end="2803" vertical-scroll-proportion="0.6331471">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/auth/index.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/bodegas_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="193" selection-start="476" selection-end="476" vertical-scroll-proportion="0.030195381">
+        <state line="111" column="57" selection-start="3410" selection-end="3410" vertical-scroll-proportion="3.2760417">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/template/footer.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/configuracion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="50" selection-start="68" selection-end="68" vertical-scroll-proportion="0.123636365">
+        <state line="0" column="0" selection-start="0" selection-end="189" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/contratos_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="25" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.63765544">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/template/header.php">
+    <entry file="file://$PROJECT_DIR$/application/models/claves_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="17" selection-start="5477" selection-end="5477" vertical-scroll-proportion="0.81005585">
+        <state line="21" column="27" selection-start="336" selection-end="492" vertical-scroll-proportion="0.5815972">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/contratos.php">
+    <entry file="file://$PROJECT_DIR$/application/models/configuracion_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="6" selection-start="340" selection-end="340" vertical-scroll-proportion="0.53817505">
+        <state line="14" column="32" selection-start="0" selection-end="440" vertical-scroll-proportion="0.41319445">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/buques.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="63" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.3500931">
+        <state line="117" column="47" selection-start="0" selection-end="12730" vertical-scroll-proportion="0.031598512">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/reportes/det_destinos.php">
+    <entry file="file://$PROJECT_DIR$/application/models/empresas_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="2" selection-start="2704" selection-end="2704" vertical-scroll-proportion="-47.076923">
+        <state line="18" column="0" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/contratos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="44" selection-start="2282" selection-end="2282" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/reportes/det_transportes.php">
+    <entry file="file://$PROJECT_DIR$/application/views/template/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="82" selection-start="2673" selection-end="2673" vertical-scroll-proportion="0.0">
+        <state line="4" column="11" selection-start="78" selection-end="78" vertical-scroll-proportion="-2.6153846">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/reportes.php">
+    <entry file="file://$PROJECT_DIR$/application/views/template/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="31" selection-start="3318" selection-end="3318" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1328399906479" expanded="true" signature="3631:3666" placeholder="..." />
-          </folding>
+        <state line="6" column="73" selection-start="54" selection-end="119" vertical-scroll-proportion="-3.9230769">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/salidas_model.php">
+    <entry file="file://$PROJECT_DIR$/application/views/buques.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="96" selection-start="1613" selection-end="1613" vertical-scroll-proportion="0.5737122">
+        <state line="38" column="42" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.41154563">
           <folding />
         </state>
       </provider>

@@ -11,6 +11,7 @@ Class Contratos_model extends CI_Model
 
         $db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/Dropbox/Trabajo/Tramitadora 2008.mde") ." ;DefaultDir=". realpath("../databases/Dropbox/Trabajo");
         $this->db_connection->open($db_connstr);
+
     }
 
     public function __destruct()
@@ -37,6 +38,20 @@ Class Contratos_model extends CI_Model
         }
 
         return $Array_result;
+    }
+
+    public function get_imagen_contrato($clave_contrato)
+    {
+        $this->load->database();
+
+        $query = $this->db->query("SELECT imagen FROM imagenes_contratos where clave_contrato = '$clave_contrato'");
+
+        if($query->num_rows()>0){
+            $row = $query->result();
+            return $row[0];
+        }else{
+            return FALSE;
+        }
     }
 }
 //end of file Contratos_model

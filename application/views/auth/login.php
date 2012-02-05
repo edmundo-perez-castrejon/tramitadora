@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Tramitadora 2012 by ingedmundo</title>
+    <title>WebFrontEnd 2012</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -78,7 +78,7 @@
 <div class="topbar">
     <div class="fill">
         <div class="container">
-            <a class="brand" href="#">Tramitadora 2012</a>
+            <a class="brand" href="#">WebFrontEnd</a>
             <ul class="nav">
                 <li class="active"><a href="#">Inicio</a></li>
                 <li><a href="#contact">Contacto</a></li>
@@ -115,7 +115,7 @@
             <div class="row">
 
                 <div align="center">
-                    <img src="<?php echo base_url();?>images/cargo/cargo-ship-pollution.jpg" width="600" />
+                    <img src="<?php echo $imagen_frontal;?>" width="600" />
                 </div>
             </div>
         </div>
@@ -123,7 +123,7 @@
     </div>
 
     <footer>
-        <p>&copy; TRAMITADORA DEL PACIFICO S.A DE C.V.</p>
+        <p>&copy; WebFrontEnd 2012</p>
     </footer>
 
 </div> <!-- /container -->

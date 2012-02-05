@@ -47,16 +47,20 @@ class Admin extends CI_Controller {
         $crud->set_relation_n_n('claves','claves_users','claves','id','id_clave','clave');
 
 
-        $crud->columns('username','email','active','first_name','last_name','claves');
+        $crud->columns('username','email','active','first_name','last_name','claves','empresa','id_empresa');
 
-        $crud->fields('username','password','email','active','first_name','last_name','claves');
+        $crud->fields('username','password','email','active','first_name','last_name','claves','id_empresa');
 
         $crud->change_field_type('password','password');
 
         $crud->display_as('username','Nombre de usuario')
             ->display_as('email','Correo Electronico')
             ->display_as('first_name','Nombre')
-            ->display_as('last_name','Apellidos');
+            ->display_as('last_name','Apellidos')
+            ->display_as('id_empresa','Empresa tratante');
+
+        #Relacino con la empresa
+        $crud->set_relation('id_empresa','empresas','nombre');
 
         $output = $crud->render();
         $this->load->view('template/header',$output);
@@ -64,7 +68,56 @@ class Admin extends CI_Controller {
         $this->load->view('template/footer');
     }
 
+    public function configuracion()
+    {
+        $crud = new grocery_CRUD();
 
+        $crud->set_theme('datatables');
+        $crud->set_table('configuracion');
+
+        $crud->set_field_upload('imagen_frontal','images/front');
+        $crud->unset_add();
+
+        $output = $crud->render();
+
+        $this->load->view('template/header',$output);
+        $this->load->view('admin/configuracion',$output);
+        $this->load->view('template/footer');
+    }
+
+    public function imagenes_contratos()
+    {
+        $crud = new grocery_CRUD();
+
+        $crud->set_theme('datatables');
+        $crud->set_table('imagenes_contratos');
+
+        $crud->set_field_upload('imagen','images/contratos');
+
+        $output = $crud->render();
+
+        $this->load->view('template/header',$output);
+        $this->load->view('admin/imagenes_contratos',$output);
+        $this->load->view('template/footer');
+
+    }
+
+    public function empresas()
+    {
+        $crud = new grocery_CRUD();
+
+        $crud->set_theme('datatables');
+        $crud->set_table('empresas');
+
+        $crud->set_field_upload('imagen','images/empresas');
+
+        $output = $crud->render();
+
+        $this->load->view('template/header',$output);
+        $this->load->view('admin/empresas',$output);
+        $this->load->view('template/footer');
+
+    }
 }
 
 

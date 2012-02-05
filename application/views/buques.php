@@ -29,6 +29,20 @@
 
 <div class="container-fluid">
     <div class="sidebar" style="width:160px; font-size: 11px;">
+
+        <?php
+        if($nombre_empresa = $this->session->userdata('nombre_empresa')){
+        ?>
+        <div class="well" align="center" style="font-size: 15px;">
+
+            <img src="<?php echo $this->session->userdata('imagen_empresa');?>" width="125"/>
+            <?php echo $nombre_empresa; ?>
+        </div>
+
+        <?php
+        }
+        ?>
+
         <div class="well">
             <h5>Destinos</h5>
             <ul>
@@ -43,12 +57,22 @@
 
             </ul>
         </div>
+        <?php
+        if(isset($imagen_buque)){
+            ?>
+                <div class="well">
+                    <a href="<?php echo $imagen_buque;?>" TARGET="_blank"><img src="<?php echo $imagen_buque;?>" width="125"></a>
+                </div>
+            <?php
+        }
+        ?>
+
 
     </div>
     <div class="content" style="margin-left: 170px;">
         <div class="hero-unit" style="padding-top: 15px;">
-            <h1>Contrato <?php echo $datos_buque['CONTRATO']; ?></h1>
-            <h3>Buque <?php echo $datos_buque['BUQUE']; ?> Proveedor <?php echo $datos_buque['NOMBRE_PROVEEDOR'];?></h3>
+            <!-- <h2>Contrato <?php echo $datos_buque['CONTRATO']; ?></h2>-->
+            <h1><?php echo $datos_buque['BUQUE']; ?> </h1><h2>Proveedor <?php echo $datos_buque['NOMBRE_PROVEEDOR'];?></h2>
             <h3> Producto <?php echo $datos_buque['NOMBRE_PRODUCTO']; ?></h3>
 
             <div id="graficabarras" style="background-image: url('<?php echo base_url();?>images/cargo/cargo-ship-drawing.png'); height: 215px;">

@@ -2,7 +2,16 @@
 </div>
 
 <footer>
-    <p>&copy; TRAMITADORA DEL PACIFICO S.A DE C.V.</p>
+    <p>&copy;
+        <?php
+        if($nombre_empresa = $this->session->userdata('nombre_empresa')){
+            echo $nombre_empresa;
+        }else{
+            echo 'Web FrontEnd 2012';
+        }
+        ?>
+    </p>
+
 </footer>
 
 </div> <!-- /container -->
