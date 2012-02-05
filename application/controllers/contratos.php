@@ -119,6 +119,18 @@ class Contratos extends CI_Controller {
         $this->load->view('template/footer');
     }
 
+    public function lightbox(){
+        $imagen_buque = $this->contratos_model->get_imagen_contrato('CMA-28');
+
+        if($imagen_buque)
+        {
+            $data['imagen_buque'] = base_url().'images/contratos/'.$imagen_buque->imagen;
+        }
+
+        $this->load->view('template/header');
+        $this->load->view('pruebalightbox',$data);
+    }
+
 }
 
 /* End of file welcome.php */

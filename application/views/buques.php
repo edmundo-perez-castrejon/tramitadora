@@ -62,7 +62,7 @@
             ?>
                 <div class="well">
 
-                    <a href="<?php echo $imagen_buque;?>" target="_blank">
+                    <a rel="lightbox" href="<?php echo $imagen_buque;?>">
                         <img src="<?php echo $imagen_buque;?>" width="125" >
                     </a>
 

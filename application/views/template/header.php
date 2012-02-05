@@ -6,14 +6,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- lightbox shit -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/lightbox2.05/css/lightbox.css" type="text/css" media="screen" />
-
-    <script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/prototype.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/scriptaculous.js?load=effects,builder"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/lightbox.js"></script>
-
-    <!-- fin de las cosas de lightbox -->
 
     <?php
     if(isset($css_files)):
@@ -117,6 +109,17 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+
+    <!-- lightbox shit -->
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/lightbox2.05/css/lightbox.css" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/prototype.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/scriptaculous.js?load=effects,builder"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/lightbox.js"></script>
+
+    <!-- fin de las cosas de lightbox -->
+
 </head>
 
 <body>
