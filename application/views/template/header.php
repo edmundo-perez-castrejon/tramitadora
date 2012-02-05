@@ -6,6 +6,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- lightbox shit -->
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/lightbox2.05/css/lightbox.css" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/prototype.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/scriptaculous.js?load=effects,builder"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/lightbox.js"></script>
+
+    <!-- fin de las cosas de lightbox -->
+
     <?php
     if(isset($css_files)):
         foreach($css_files as $file): ?>
@@ -26,7 +35,7 @@
 
 
 
-    <style type='text/css'>
+   <!-- <style type='text/css'>
         body
         {
             font-family: Arial;
@@ -41,7 +50,7 @@
         {
             text-decoration: underline;
         }
-    </style>
+    </style> -->
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>

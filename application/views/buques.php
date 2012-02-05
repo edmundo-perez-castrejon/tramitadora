@@ -61,7 +61,12 @@
         if(isset($imagen_buque)){
             ?>
                 <div class="well">
-                    <a href="<?php echo $imagen_buque;?>" TARGET="_blank"><img src="<?php echo $imagen_buque;?>" width="125"></a>
+
+                    <a href="<?php echo $imagen_buque;?>" target="_blank">
+                        <img src="<?php echo $imagen_buque;?>" width="125" >
+                    </a>
+
+
                 </div>
             <?php
         }
@@ -174,5 +179,5 @@
 </div>
 
 <script type="text/javascript">
-        timedRefresh(6000);
+        timedRefresh(600000);
 </script>
