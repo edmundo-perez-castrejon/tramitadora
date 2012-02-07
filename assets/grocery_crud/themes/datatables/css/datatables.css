@@ -176,7 +176,7 @@ div.form-div input.datetime-input
 }
 a
 {
-	font-size: 15px;
+	font-size: 13px;
 	color: #333;
 	text-decoration: underline;
 }
@@ -184,6 +184,15 @@ a:hover
 {
 	text-decoration: none;	
 }
+
+.actions
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 0px;
+
+}
+
 th.actions
 {
 	white-space:nowrap;
@@ -193,5 +202,5 @@ th.actions
 td.actions
 {
 	white-space:nowrap;
-	text-align: right;	
+	text-align: right;
 }

@@ -97,6 +97,7 @@ class Contratos extends CI_Controller {
         $data['cve_cliente'] = $cve_cliente;
         $data['cve_contrato'] = $cve_contrato;
 
+
         $this->load->view('template/header');
         $this->load->view('buques',$data);
         $this->load->view('template/footer');
@@ -119,17 +120,7 @@ class Contratos extends CI_Controller {
         $this->load->view('template/footer');
     }
 
-    public function lightbox(){
-        $imagen_buque = $this->contratos_model->get_imagen_contrato('CMA-28');
 
-        if($imagen_buque)
-        {
-            $data['imagen_buque'] = base_url().'images/contratos/'.$imagen_buque->imagen;
-        }
-
-        $this->load->view('template/header');
-        $this->load->view('pruebalightbox',$data);
-    }
 
 }
 

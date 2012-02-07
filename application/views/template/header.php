@@ -2,10 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>WebFrontEnd 2012</title>
+    <title>
+        <?php
+        if($nombre_empresa = $this->session->userdata('nombre_empresa')){
+            echo $nombre_empresa;
+        }else{
+            echo 'Web FrontEnd 2012';
+        }
+        ?>
+    </title>
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- Le styles -->
+    <link href="<?php echo base_url();?>assets/bootstrap/bootstrap.css" rel="stylesheet">
 
     <?php
     if(isset($css_files)):
@@ -49,8 +59,7 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Le styles -->
-    <link href="<?php echo base_url();?>assets/bootstrap/bootstrap.css" rel="stylesheet">
+
     <style type="text/css">
             /* Override some defaults */
         html, body {
@@ -111,14 +120,6 @@
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
 
-    <!-- lightbox shit -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/lightbox2.05/css/lightbox.css" type="text/css" media="screen" />
-
-    <script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/prototype.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/scriptaculous.js?load=effects,builder"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/lightbox.js"></script>
-
-    <!-- fin de las cosas de lightbox -->
 
 </head>
 

@@ -1,3 +1,12 @@
+<!-- lightbox shit -->
+<link rel="stylesheet" href="<?php echo base_url();?>assets/lightbox2.05/css/lightbox.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/prototype.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/lightbox2.05/js/lightbox.js"></script>
+
+<!-- fin de las cosas de lightbox -->
+
 <style type="text/css">
     p.css-vertical-text {
         color:#333;
