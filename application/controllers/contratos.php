@@ -3,6 +3,7 @@
 class Contratos extends CI_Controller {
 
     private $user = null;
+    private $data = null;
 
     public function __construct()
     {
@@ -42,21 +43,28 @@ class Contratos extends CI_Controller {
 
         $data_cliente = $this->clientes_model->get_datos($cve_cliente);
 
-
-
         if(count($data_cliente)>0){
 
-            $data['nombre_cliente'] = $this->user->first_name.' '.$this->user->last_name;
+            $this->data['nombre_cliente'] = $this->user->first_name.' '.$this->user->last_name;
 
             $lst_contratos = array();
             foreach($cves_cliente as $cve_cliente)
             {
                 $lst_contratos[] = $this->contratos_model->get_contratos_by_cliente($cve_cliente);
             }
-            $data['lst_contratos'] = $lst_contratos;
+
+            $lst_contratos_datos = array();
+            foreach($lst_contratos as $contrato)
+            {
+                $datos_buque = $this->buques_model->get_datos($contrato['clave_contrato']);
+                $datos_buque['clave_cliente'] = $contrato['clave_cliente'];
+                $lst_contratos_datos[] = $datos_buque;
+            }
+
+            $this->data['lst_contratos'] = $lst_contratos_datos;
 
             $this->load->view('template/header');
-            $this->load->view('contratos',$data);
+            $this->load->view('contratos',$this->data);
             $this->load->view('template/footer');
         }else{
             echo 'Ese cliente no es valido';

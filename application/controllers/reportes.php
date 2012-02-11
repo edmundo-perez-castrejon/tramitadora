@@ -3,6 +3,7 @@
 class Reportes extends CI_Controller {
 
     private $data = null;
+    private $user = null;
 
     public function __construct()
     {
@@ -34,6 +35,8 @@ class Reportes extends CI_Controller {
             $this->data['cve_cliente'] = $cve_cliente;
             $this->data['cve_contrato'] = $cve_contrato;
             $this->data['datos_destinos'] = $datos_destinos;
+
+            $this->user = $this->ion_auth->user()->row();
         }
 
     }
@@ -99,6 +102,46 @@ class Reportes extends CI_Controller {
         $html = $this->load->view('reportes/det_transportes', $this->data, true);
         pdf_create($html, 'Detalle_de_destinos_contrato'.$this->data['datos_buque']['CONTRATO']);
         #$this->load->view('reportes/det_transportes', $this->data);
+    }
+
+    public function rpt_contratos()
+    {
+
+        $user_id = $this->session->userData('user_id');
+
+        #obtener los datos del cliente
+        $cves_cliente = $this->clientes_model->get_claves($user_id);
+
+        $cve_cliente = $cves_cliente[0];
+
+        $data_cliente = $this->clientes_model->get_datos($cve_cliente);
+
+        if(count($data_cliente)>0){
+
+            $this->data['nombre_cliente'] = $this->user->first_name.' '.$this->user->last_name;
+
+            $lst_contratos = array();
+            foreach($cves_cliente as $cve_cliente)
+            {
+                $lst_contratos[] = $this->contratos_model->get_contratos_by_cliente($cve_cliente);
+            }
+
+            $lst_contratos_datos = array();
+            foreach($lst_contratos as $contrato)
+            {
+                $datos_buque = $this->buques_model->get_datos($contrato['clave_contrato']);
+                $datos_buque['clave_cliente'] = $contrato['clave_cliente'];
+                $lst_contratos_datos[] = $datos_buque;
+            }
+
+            $this->data['lst_contratos'] = $lst_contratos_datos;
+
+            $html = $this->load->view('reportes/rpt_contratos', $this->data, true);
+            pdf_create_landscape($html, 'Reporte_contratos');
+            #$this->load->view('reportes/rpt_contratos', $this->data);
+        }
+
+
     }
 
     public function under_construction()

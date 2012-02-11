@@ -29,6 +29,9 @@ class Claves extends CI_Controller {
         $crud = new grocery_CRUD();
         $crud->set_table('claves');
         $crud->unset_columns('id');
+
+        $crud->display_as('clave','clave de usuario');
+
         $output = $crud->render();
 
         $this->load->view('template/header',$output);

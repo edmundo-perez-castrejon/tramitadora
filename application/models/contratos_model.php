@@ -30,7 +30,7 @@ Class Contratos_model extends CI_Model
             $rs_fld1 = $rs->Fields(1); #Clave del contrato del cliente
 
             while (!$rs->EOF) {
-                $Array_result[$rs_fld0->value] = $rs_fld1->value;
+                $Array_result = array('clave_cliente'=>$rs_fld0->value, 'clave_contrato'=>$rs_fld1->value);
                 $rs->MoveNext();
             }
 

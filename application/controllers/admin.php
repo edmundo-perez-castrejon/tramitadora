@@ -43,9 +43,10 @@ class Admin extends CI_Controller {
     {
         $crud = new grocery_CRUD();
 
+        $crud->where('username!=',"'root'", FALSE);
 
         $crud->set_table('users');
-        $crud->set_relation_n_n('claves','claves_users','claves','id','id_clave','clave');
+        $crud->set_relation_n_n('claves','claves_users','claves','id','id_clave','contrato');
 
         $crud->set_theme('datatables');
         $crud->columns('username','active','first_name','last_name','claves','id_empresa');
@@ -54,11 +55,12 @@ class Admin extends CI_Controller {
 
         $crud->change_field_type('password','password');
 
-        $crud->display_as('username','Nombre de usuario')
+        $crud->display_as('username','Usuario')
             ->display_as('email','Correo Electronico')
             ->display_as('first_name','Nombre')
             ->display_as('last_name','Apellidos')
-            ->display_as('id_empresa','Empresa tratante');
+            ->display_as('id_empresa','Empresa tratante')
+            ->display_as('claves','Contratos');
 
         #Relacino con la empresa
         $crud->set_relation('id_empresa','empresas','nombre');

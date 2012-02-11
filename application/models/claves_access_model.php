@@ -24,14 +24,15 @@ Class Claves_access_model extends CI_Model
         $Array_result = array();
 
 
-        $rs = $this->db_connection->execute("SELECT [clave_cliente] FROM CLIENTES");
+        $rs = $this->db_connection->execute("SELECT [clave_cliente], [contrato_cliente] FROM CLIENTES");
 
         $rs_fld0 = $rs->Fields(0);
+        $rs_fld1 = $rs->Fields(1);
 
 
         while (!$rs->EOF) {
             #array_result['bodega1'] = 'cantidad de la bodega 1'
-            $Array_result[] = $rs_fld0->value;
+            $Array_result[] = array('clave_cliente'=>$rs_fld0->value, 'clave_contrato'=>$rs_fld1->value);
 
             $rs->MoveNext();
         }

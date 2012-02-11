@@ -14,6 +14,7 @@ class Claves_lib {
     {
         $lst_claves = $this->CI->claves_model->get_claves ();
         $lst_claves_access = $this->CI->claves_access_model->get_claves();
+
         $lst_sync = array();
 
         foreach($lst_claves_access as $cve_accss)
@@ -21,7 +22,7 @@ class Claves_lib {
             $encontrado = FALSE;
             foreach($lst_claves as $cve)
             {
-                if($cve == $cve_accss){
+                if($cve == $cve_accss['clave_cliente']){
                     $encontrado = TRUE;
                 }
             }
@@ -35,7 +36,8 @@ class Claves_lib {
         foreach($lst_sync as $new_cve)
         {
             $data = array(
-                'clave' => $new_cve
+                'clave' => $new_cve['clave_cliente'],
+                'contrato' => $new_cve['clave_contrato']
             );
             $this->CI->claves_model->nueva($data);
         }

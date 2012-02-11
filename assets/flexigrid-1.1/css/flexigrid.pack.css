@@ -34,7 +34,7 @@
 .flexigrid div.fbutton:hover,.flexigrid div.fbutton.fbOver{border:1px solid #ccc;padding:0}
 .flexigrid div.fbutton:hover div,.flexigrid div.fbutton.fbOver div{border-left:1px solid #fff;border-top:1px solid #fff;border-right:1px solid #eee;border-bottom:1px solid #eee;padding:0 2px}
 .flexigrid div.hDiv{background:#fafafa url(images/fhbg.gif) repeat-x bottom;position:relative;border:1px solid #ccc;border-bottom:0;overflow:hidden}
-.flexigrid div.hDiv table{border-right:1px solid #fff}
+.flexigrid div.hDiv table{border-right:1px solid #fff; margin-top: 0px; margin-bottom: 0px;}
 .flexigrid div.cDrag{float:left;position:absolute;z-index:2;overflow:visible}
 .flexigrid div.cDrag div{float:left;background:none;display:block;position:absolute;height:24px;width:5px;cursor:col-resize}
 .flexigrid div.cDrag div:hover,.flexigrid div.cDrag div.dragging{background:url(images/line.gif) repeat-y 2px center}
@@ -47,7 +47,7 @@
 .flexigrid div.vGrip{height:5px;overflow:hidden;position:relative;background:#fafafa url(images/wbg.gif) repeat-x 0 -1px;border:1px solid #ccc;border-top:0;text-align:center;cursor:row-resize}
 .flexigrid div.vGrip span{display:block;width:20px;height:1px;overflow:hidden;border-top:1px solid #aaa;border-bottom:1px solid #aaa;background:none;margin:1px auto}
 .flexigrid div.hDiv th,.flexigrid div.bDiv td
-/* common cell properties*/{text-align:left;border-right:1px solid #ddd;border-left:1px solid #fff;overflow:hidden;vertical-align:top!important;padding-left:0;padding-right:0}
+/* common cell properties*/{text-align:left;border-right:1px solid #ddd;border-left:1px solid #fff;overflow:hidden;vertical-align:top!important;padding: 0px 0px 0px 0px; line-height: 12px;}
 .flexigrid div.hDiv th div,.flexigrid div.bDiv td div,div.colCopy div
 /* common inner cell properties*/{border-left:0 solid #fff;padding:5px}
 .flexigrid div.hDiv th,div.colCopy{font-weight:400;height:24px;cursor:default;white-space:nowrap;overflow:hidden}

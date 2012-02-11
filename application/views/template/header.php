@@ -151,7 +151,7 @@
                     if($this->ion_auth->is_admin()):
                         ?>
                         <li>
-                            <?php echo anchor('claves/claves_usuarios','Claves'); ?>
+                            <?php echo anchor('claves/claves_usuarios','Contratos'); ?>
                         </li>
 
                         <li>
