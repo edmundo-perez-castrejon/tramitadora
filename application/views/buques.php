@@ -18,14 +18,19 @@
         white-space:nowrap;
         display:block;
         bottom:0;
-        width:20px;
-        height:20px;
+        width:25px;
+        height:120px;
         font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
         font-size:12px;
         font-weight:normal;
         text-shadow: 0px 0px 1px #333;
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
     }
+
 </style>
+
+
+
 
 <script type="text/JavaScript">
 
@@ -75,7 +80,6 @@
                         <img src="<?php echo $imagen_buque;?>" width="125" >
                     </a>
 
-
                 </div>
             <?php
         }
@@ -83,6 +87,7 @@
 
 
     </div>
+
     <div class="content" style="margin-left: 170px;">
         <div class="hero-unit" style="padding-top: 15px;">
             <!-- <h2>Contrato <?php echo $datos_buque['CONTRATO']; ?></h2>-->
@@ -90,11 +95,11 @@
             <h3> Producto <?php echo $datos_buque['NOMBRE_PRODUCTO']; ?></h3>
 
             <div id="graficabarras" style="background-image: url('<?php echo base_url();?>images/cargo/cargo-ship-drawing.png'); height: 215px;">
-                <div id="barras" style="padding-left: 85px; padding-top: 155px;">
+                <div id="barras" style="padding-left: 50px; padding-top: 55px;">
                     <?php
                         $alto_maximo = 35;
                     ?>
-                    <table style="width:85%;" align="center">
+                    <table style="width:80%;" align="center">
                         <tr>
                             <?php
                             foreach($datos_bodegas as $nobodega=>$cantidad)
@@ -122,7 +127,7 @@
                                 }
                                 echo '</p>';
                                 echo '</td>';
-                                echo "<td style='font-size: 12px;'>$restante_porciento%</td>";
+                                echo "<td style='font-size: 10px; vertical-align: bottom;  padding-bottom: 15px;'>$restante_porciento%</td>";
 
 
                             }
@@ -131,6 +136,7 @@
                     </table>
                 </div>
             </div>
+
             <table style="width:100%; font-size: 11px; padding: 0; border-collapse: collapse;">
                 <tr>
                     <td width="40px"><strong>Bodega</strong></td>

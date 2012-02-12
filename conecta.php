@@ -1,7 +1,7 @@
 <?php
 $db_connection = new COM("ADODB.Connection");
 
-$db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/Tramitadora 2008.mde") ." ;DefaultDir=". realpath("../databases");
+$db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/TramitaMZO.mde") ." ;DefaultDir=". realpath("../databases");
 $db_connection->open($db_connstr);
 
 $rs = $db_connection->execute("SELECT * FROM SALIDAS WHERE DESTINO_SALIDA = 'ZZ-1'");

@@ -7,7 +7,7 @@
         if($nombre_empresa = $this->session->userdata('nombre_empresa')){
             echo $nombre_empresa;
         }else{
-            echo 'Web FrontEnd 2012';
+            echo $this->config->item('nombre_sistema');
         }
         ?>
     </p>

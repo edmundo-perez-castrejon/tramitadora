@@ -7,12 +7,13 @@
         if($nombre_empresa = $this->session->userdata('nombre_empresa')){
             echo $nombre_empresa;
         }else{
-            echo 'Web FrontEnd 2012';
+            echo $this->config->item('nombre_sistema');
         }
         ?>
     </title>
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=Emulate7" />
 
     <!-- Le styles -->
     <link href="<?php echo base_url();?>assets/bootstrap/bootstrap.css" rel="stylesheet">
@@ -133,7 +134,7 @@
                 {
                     echo anchor('contratos/get_datos',$this->session->userData('cve_contrato'),array('class'=>'brand'));
                 }else{
-                    echo anchor('#','WebFrontEnd 2012',array('class'=>'brand'));
+                    echo anchor('#',$this->config->item('nombre_sistema'),array('class'=>'brand'));
                 }
             ?>
 </a>

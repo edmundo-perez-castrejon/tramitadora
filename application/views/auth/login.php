@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>WebFrontEnd 2012</title>
+    <title><?php echo $this->config->item('nombre_sistema');?></title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -78,7 +78,7 @@
 <div class="topbar">
     <div class="fill">
         <div class="container">
-            <a class="brand" href="#">WebFrontEnd</a>
+            <a class="brand" href="#"><?php echo $this->config->item('nombre_sistema');?></a>
             <ul class="nav">
                 <li class="active"><a href="#">Inicio</a></li>
                 <li><a href="#contact">Contacto</a></li>
@@ -123,7 +123,7 @@
     </div>
 
     <footer>
-        <p>&copy; WebFrontEnd 2012</p>
+        <p>&copy; <?php echo $this->config->item('nombre_sistema');?> 2012</p>
     </footer>
 
 </div> <!-- /container -->

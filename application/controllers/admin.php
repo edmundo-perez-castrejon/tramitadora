@@ -81,6 +81,8 @@ class Admin extends CI_Controller {
         $crud->set_field_upload('imagen_frontal','images/front');
         $crud->unset_add();
 
+        $crud->unset_delete();
+
         $output = $crud->render();
 
         $this->load->view('template/header',$output);
