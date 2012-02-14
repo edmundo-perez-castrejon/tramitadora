@@ -130,12 +130,15 @@
     <div class="fill">
         <div class="container">
         <?php
-                if($this->session->userData('cve_contrato'))
+                if($this->session->userdata('cve_contrato'))
                 {
-                    echo anchor('contratos/get_datos',$this->session->userData('cve_contrato'),array('class'=>'brand'));
+                    $ct = $this->session->userdata('cve_contrato');
+                    $cl = $this->session->userdata('cve_cliente');
+                    echo anchor('contratos/get_datos/ct/'.$ct.'/cl/'.$cl, $ct,  array('class'=>'brand'));
                 }else{
                     echo anchor('#',$this->config->item('nombre_sistema'),array('class'=>'brand'));
                 }
+
             ?>
 </a>
             <ul class="nav">

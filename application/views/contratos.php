@@ -16,7 +16,7 @@
         {
             ?>
             <tr>
-                <td><?php echo anchor('contratos/get_datos/'.$contrato['CONTRATO'].'/'.$contrato['clave_cliente'], $contrato['CONTRATO'].'/'.$contrato['clave_cliente']);?> </td>
+                <td><?php echo anchor('contratos/get_datos/ct/'.$contrato['CONTRATO'].'/cl/'.$contrato['clave_cliente'], $contrato['CONTRATO'].'/'.$contrato['clave_cliente']);?> </td>
                 <td><?php echo $contrato['BUQUE'];?></td>
                 <td><?php echo $contrato['NOMBRE_PRODUCTO'];?></td>
                 <td><?php echo $contrato['FECHA_ARRIBO'];?></td>

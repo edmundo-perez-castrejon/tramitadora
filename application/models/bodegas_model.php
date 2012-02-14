@@ -9,7 +9,7 @@ Class Bodegas_model extends CI_Model
         parent::__construct();
         $this->db_connection = new COM("ADODB.Connection");
 
-        $db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/Dropbox/Trabajo/TramitaMZO.mde") ." ;DefaultDir=". realpath("../databases/Dropbox/Trabajo");
+        $db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/Dropbox/Trabajo/".$this->config->item('nombre_bd_access')) ." ;DefaultDir=". realpath("../databases/Dropbox/Trabajo");
         $this->db_connection->open($db_connstr);
     }
 

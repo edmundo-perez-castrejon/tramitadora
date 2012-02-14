@@ -10,7 +10,7 @@ Class Clientes_model extends CI_Model
         $this->load->database();
         $this->db_connection = new COM("ADODB.Connection");
 
-        $db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/Dropbox/Trabajo/TramitaMZO.mde") ." ;DefaultDir=". realpath("../databasesDropbox/Trabajo");
+        $db_connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("../databases/Dropbox/Trabajo/".$this->config->item('nombre_bd_access')) ." ;DefaultDir=". realpath("../databasesDropbox/Trabajo");
         $this->db_connection->open($db_connstr);
     }
 

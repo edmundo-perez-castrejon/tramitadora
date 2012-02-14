@@ -17,10 +17,12 @@ class Contratos extends CI_Controller {
             //redirect them to the login page
             redirect('auth/login', 'refresh');
         }else{
-            $this->load->library('session');
+
             $this->load->library('salidas_lib');
             $this->load->model(array('contratos_model','clientes_model','buques_model','bodegas_model','destinos_model','empresas_model'));
             $this->load->helper(array('url','form'));
+
+            $this->load->library('session');
 
             $this->user = $this->ion_auth->user()->row();
 
@@ -29,6 +31,10 @@ class Contratos extends CI_Controller {
                 $this->session->set_userdata('nombre_empresa', $datos_empresa->nombre);
                 $this->session->set_userdata('imagen_empresa', base_url().'images/empresas/'.$datos_empresa->imagen);
             }
+/*            echo '<pre>';
+            var_dump($this->session->all_userdata());
+            echo '</pre>';*/
+
         }
     }
 
@@ -75,18 +81,18 @@ class Contratos extends CI_Controller {
     public function get_datos()
     {
 
-        if($cve_contrato = $this->uri->segment(3))
-        {
-            $this->session->set_userdata('cve_contrato',$cve_contrato);
-        }else{
-            $cve_contrato = $this->session->userdata('cve_contrato');
-        }
+        $array = $this->uri->ruri_to_assoc(3);
 
-        if($cve_cliente = $this->uri->segment(4))
-        {
-            $this->session->set_userdata('cve_cliente',$cve_cliente);
+        if(count($array)>0){
+
+            $this->session->set_userdata('cve_contrato', $array['ct']);
+            $this->session->set_userdata('cve_cliente', $array['cl']);
+
+            $cve_contrato = $array['ct'];
+            $cve_cliente = $array['cl'];
         }else{
-            $cve_cliente = $this->session->userdata('cve_cliente');
+            $cve_contrato = $this->session->userdata('ct');
+            $cve_cliente = $this->session->userdata('cl');
         }
 
         $imagen_buque = $this->contratos_model->get_imagen_contrato($cve_contrato);
@@ -119,6 +125,8 @@ class Contratos extends CI_Controller {
         $datos_buque = $this->buques_model->get_datos($cve_contrato);
 
         $datos_destinos = $this->destinos_model->get_datos($cve_cliente, $cve_contrato);
+
+
 
         $data['datos_destinos'] = $datos_destinos;
         $data['datos_buque'] = $datos_buque;
