@@ -1,6 +1,6 @@
         <div class="content">
 
-                <h1>Contrato <?php echo anchor('contratos/get_datos', $datos_buque['CONTRATO']);?></h1>
+                <h1>Contrato <?php echo $datos_buque['CONTRATO'];?></h1>
                 <h3>Buque <?php echo $datos_buque['BUQUE']; ?> Proveedor <?php echo $datos_buque['NOMBRE_PROVEEDOR'];?></h3>
                 <h3> Producto <?php echo $datos_buque['NOMBRE_PRODUCTO']; ?></h3>
 

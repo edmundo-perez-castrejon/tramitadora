@@ -23,8 +23,20 @@ class Reportes extends CI_Controller {
             $this->load->model(array('contratos_model','clientes_model','buques_model','bodegas_model','destinos_model','salidas_model'));
             $this->load->helper(array('url','form'));
 
-            $cve_contrato = $this->session->userdata('cve_contrato');
-            $cve_cliente = $this->session->userdata('cve_cliente');
+            $array_uri = $this->uri->ruri_to_assoc(3);
+
+            if(isset($array_uri['ct']) and isset($array_uri['cl']))
+            {
+                $cve_contrato = $array_uri['ct'];
+                $cve_cliente = $array_uri['cl'];
+            }else
+            {
+                $cliente_contrato = $this->session->userdata('cliente_contrato');
+                $cve_contrato = $cliente_contrato['ct'];
+                $cve_cliente = $cliente_contrato['cl'];
+
+            }
+
 
             $datos_bodegas = $this->bodegas_model->get_datos($cve_contrato);
             $datos_buque = $this->buques_model->get_datos($cve_contrato);

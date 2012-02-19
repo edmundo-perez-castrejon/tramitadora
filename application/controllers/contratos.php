@@ -56,8 +56,14 @@ class Contratos extends CI_Controller {
             $lst_contratos = array();
             foreach($cves_cliente as $cve_cliente)
             {
-                $lst_contratos[] = $this->contratos_model->get_contratos_by_cliente($cve_cliente);
+                $contratos_cliente =$this->contratos_model->get_contratos_by_cliente($cve_cliente);
+                if(count($contratos_cliente)>0)
+                {
+                    $lst_contratos[] = $contratos_cliente;
+                }
             }
+
+
 
             $lst_contratos_datos = array();
             foreach($lst_contratos as $contrato)
@@ -65,7 +71,9 @@ class Contratos extends CI_Controller {
                 $datos_buque = $this->buques_model->get_datos($contrato['clave_contrato']);
                 $datos_buque['clave_cliente'] = $contrato['clave_cliente'];
                 $lst_contratos_datos[] = $datos_buque;
+
             }
+
 
             $this->data['lst_contratos'] = $lst_contratos_datos;
 
@@ -83,10 +91,14 @@ class Contratos extends CI_Controller {
 
         $array = $this->uri->ruri_to_assoc(3);
 
+        $data['uri'] = $array;
+
         if(count($array)>0){
 
             $this->session->set_userdata('cve_contrato', $array['ct']);
             $this->session->set_userdata('cve_cliente', $array['cl']);
+
+            $this->session->set_userdata('cliente_contrato', $array);
 
             $cve_contrato = $array['ct'];
             $cve_cliente = $array['cl'];
@@ -112,26 +124,28 @@ class Contratos extends CI_Controller {
         $data['cve_contrato'] = $cve_contrato;
 
 
-        $this->load->view('template/header');
+        $this->load->view('template/header', $data);
         $this->load->view('buques',$data);
         $this->load->view('template/footer');
     }
 
     public function get_destinos()
     {
-        $cve_contrato = $this->session->userdata('cve_contrato');
-        $cve_cliente = $this->session->userdata('cve_cliente');
+        $array_uri = $this->uri->ruri_to_assoc(3);
+
+        $cve_contrato = $array_uri['ct'];
+        $cve_cliente =  $array_uri['cl'];
 
         $datos_buque = $this->buques_model->get_datos($cve_contrato);
 
         $datos_destinos = $this->destinos_model->get_datos($cve_cliente, $cve_contrato);
 
-
+        $data['uri'] = $array_uri;
 
         $data['datos_destinos'] = $datos_destinos;
         $data['datos_buque'] = $datos_buque;
 
-        $this->load->view('template/header');
+        $this->load->view('template/header', $data);
         $this->load->view('destinos',$data);
         $this->load->view('template/footer');
     }

@@ -130,10 +130,13 @@
     <div class="fill">
         <div class="container">
         <?php
-                if($this->session->userdata('cve_contrato'))
+                if(isset($uri))
                 {
-                    $ct = $this->session->userdata('cve_contrato');
-                    $cl = $this->session->userdata('cve_cliente');
+
+                        $ct = $uri['ct'];
+                        $cl = $uri['cl'];
+                    /*    $ct = $this->session->userdata('cve_contrato');
+                        $cl = $this->session->userdata('cve_cliente');*/
                     echo anchor('contratos/get_datos/ct/'.$ct.'/cl/'.$cl, $ct,  array('class'=>'brand'));
                 }else{
                     echo anchor('#',$this->config->item('nombre_sistema'),array('class'=>'brand'));

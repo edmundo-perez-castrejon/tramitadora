@@ -60,7 +60,11 @@
         <div class="well">
             <h5>Destinos</h5>
             <ul>
-                <li><?php echo anchor('contratos/get_destinos','Ver detalle');?></li>
+                <li><?php
+                    $ct = $this->session->userdata('cve_contrato');
+                    $cl = $this->session->userdata('cve_cliente');
+                    echo anchor('contratos/get_destinos/ct/'.$ct.'/cl/'.$cl,'Ver detalle');
+                    ?></li>
             </ul>
             <h5>Reportes</h5>
             <ul>
