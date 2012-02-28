@@ -146,10 +146,16 @@
                     <td width="40px"><strong>Bodega</strong></td>
                     <td width="50px"><strong>Cantidad</strong></td>
                     <td width="50px"><strong>Salidas</strong></td>
+                    <td width="50px"><strong>Por enviar</strong></td>
                     <td width="40px"><strong>Restante</strong></td>
 
                 </tr>
                 <?php
+
+                $cantidad_total = 0;
+                $peso_total_bodega_total = 0;
+                $diferencia_total = 0;
+
                 foreach($datos_bodegas as $nobodega=>$cantidad)
                 {
                     $peso_total_bodega =$this->salidas_lib->get_peso_total_bodega($cve_cliente,  $datos_buque['CONTRATO'], $nobodega);
@@ -164,6 +170,8 @@
                     echo '<td style="line-height:5px;">'.$nobodega.'</td>';
                     echo '<td style="line-height:5px;">'.number_format($cantidad).'</td>';
                     echo '<td style="line-height:5px;">'.number_format($peso_total_bodega).'</td>';
+                    echo '<td style="line-height:5px;">'.number_format($cantidad-$peso_total_bodega).'</td>';
+
 
                     $bgcolor = "white";
 
@@ -186,10 +194,21 @@
                     echo '<td bgcolor='.$bgcolor.' style="line-height:5px;">';
                     echo 100-round($porciento_dif,2).'%</td>';
 
-
+                    $cantidad_total += $cantidad;
+                    $peso_total_bodega_total += $peso_total_bodega;
+                    $diferencia_total += $cantidad-$peso_total_bodega;
                     echo '</tr>';
                 }
+
+                $porciento_dif_total = ($peso_total_bodega_total*100)/$cantidad_total;
                 ?>
+                <tr>
+                    <td><b>&nbsp;</b></td>
+                    <td><b><?php echo number_format($cantidad_total); ?></b></td>
+                    <td><b><?php echo number_format($peso_total_bodega_total); ?></b></td>
+                    <td><b><?php echo number_format($diferencia_total); ?></b></td>
+                    <td><b><?php echo 100-round($porciento_dif_total,2);?>%</b></td>
+                </tr>
             </table>
             <!-- <p><a class="btn primary large">Destinos &raquo;</a></p> -->
         </div>
