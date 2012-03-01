@@ -51,7 +51,7 @@ class Admin extends CI_Controller {
         $crud->set_theme('datatables');
         $crud->columns('username','active','first_name','last_name','claves','id_empresa');
 
-        $crud->fields('username','password','email','active','first_name','last_name','claves','id_empresa');
+        $crud->fields('username','password','email','active','first_name','last_name','claves','id_empresa','superusuario');
 
         $crud->change_field_type('password','password');
 

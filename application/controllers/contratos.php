@@ -31,10 +31,8 @@ class Contratos extends CI_Controller {
                 $this->session->set_userdata('nombre_empresa', $datos_empresa->nombre);
                 $this->session->set_userdata('imagen_empresa', base_url().'images/empresas/'.$datos_empresa->imagen);
             }
-/*            echo '<pre>';
-            var_dump($this->session->all_userdata());
-            echo '</pre>';*/
 
+            $this->session->set_userdata('superusuario',$this->user->superusuario);
         }
     }
 
@@ -73,7 +71,6 @@ class Contratos extends CI_Controller {
                 $lst_contratos_datos[] = $datos_buque;
 
             }
-
 
             $this->data['lst_contratos'] = $lst_contratos_datos;
 
@@ -122,6 +119,13 @@ class Contratos extends CI_Controller {
 
         $data['cve_cliente'] = $cve_cliente;
         $data['cve_contrato'] = $cve_contrato;
+
+
+        if($this->config->item('dev_mode')){
+            echo '<pre>';
+            print_r($data);
+            echo '</pre>';
+        }
 
 
         $this->load->view('template/header', $data);
