@@ -32,7 +32,11 @@ class Contratos extends CI_Controller {
                 $this->session->set_userdata('imagen_empresa', base_url().'images/empresas/'.$datos_empresa->imagen);
             }
 
-            $this->session->set_userdata('superusuario',$this->user->superusuario);
+            //$this->session->set_userdata('superusuario',$this->user->superusuario);
+            #Parche 06/03/2012 TODOS DEBERAN SER SUPERUSUARIOS
+            #Considerar tambien que se modifico el valor default de la columna en la base de datos, tabla usuarios par
+            #que siempre fuera 1, cambiar esto a 0 en caso de necesitar revertir el parche
+            $this->session->set_userdata('superusuario',1);
         }
     }
 
