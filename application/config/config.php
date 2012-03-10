@@ -16,7 +16,6 @@
 */
 $config['base_url']	= '';
 $config['nombre_sistema'] = 'Control de Buques';
-$config['nombre_bd_access'] = 'TramitaMZO.mde';
 
 $config['dev_mode'] = FALSE;
 

@@ -171,6 +171,18 @@
                             <?php echo anchor('admin/empresas','Empresas');?>
                         </li>
                         <?php
+
+                        if($this->session->userdata('username') == 'root')
+                        {
+                            ?>
+                            <li>
+                                <?php echo anchor('muelles/admin','Muelles');?>
+                            </li>
+                            <?php
+                        }
+                        ?>
+
+                        <?php
                     endif;
                 ?>
 
