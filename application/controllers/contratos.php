@@ -44,14 +44,10 @@ class Contratos extends CI_Controller {
 	{
         $user_id = $this->session->userData('user_id');
 
-        #obtener los datos del cliente
+        #obtener los datos del cliente de MySQL
         $cves_cliente = $this->clientes_model->get_claves($user_id);
 
-        $cve_cliente = $cves_cliente[0];
-
-        $data_cliente = $this->clientes_model->get_datos($cve_cliente);
-
-        if(count($data_cliente)>0){
+        if(count($cves_cliente)>0){
 
             $this->data['nombre_cliente'] = $this->user->first_name.' '.$this->user->last_name;
 
@@ -82,7 +78,7 @@ class Contratos extends CI_Controller {
             $this->load->view('contratos',$this->data);
             $this->load->view('template/footer');
         }else{
-            echo 'Ese cliente no es valido';
+            echo 'NO EXISTEN CONTRATOS ASIGNADOS';
         }
 
 	}

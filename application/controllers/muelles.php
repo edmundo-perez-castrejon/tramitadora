@@ -8,8 +8,6 @@ class Muelles extends CI_Controller {
     {
         parent::__construct();
         $this->load->helper('url');
-        $this->load->library('ion_auth');
-        $this->load->library('grocery_CRUD');
 
         if (!$this->ion_auth->logged_in())
         {
@@ -17,8 +15,7 @@ class Muelles extends CI_Controller {
             redirect('auth/login', 'refresh');
         }else{
             $this->load->library('session');
-            #$this->load->library('salidas_lib');
-            #$this->load->model(array('contratos_model','clientes_model','buques_model','bodegas_model','destinos_model'));
+            $this->load->model('muelles_model');
             $this->load->helper(array('url','form'));
         }
 
@@ -41,18 +38,20 @@ class Muelles extends CI_Controller {
 
     public function lista_muelles()
     {
-        $this->load->model('muelles_model');
+
 
         $lst = $this->muelles_model->get_listado();
 
-        $data['lst_muelles'] = $lst;
+        if(count($lst) > 1)
+        {
+            $data['lst_muelles'] = $lst;
 
-
-        $this->load->view('template/header');
-        $this->load->view('muelles/lista_muelles', $data);
-        $this->load->view('template/footer');
-
-
+            $this->load->view('template/header');
+            $this->load->view('muelles/lista_muelles', $data);
+            $this->load->view('template/footer');
+        }else{
+            redirect('muelles/select/'.$lst[0]->archivo);
+        }
     }
 
     public function select()
@@ -68,7 +67,6 @@ class Muelles extends CI_Controller {
             //set the flash data error message if there is one
             $this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
             redirect('admin/grocery_usuarios');
-
         }
     }
 
