@@ -69,7 +69,6 @@ class Contratos extends CI_Controller {
                 $datos_buque = $this->buques_model->get_datos($contrato['clave_contrato']);
                 $datos_buque['clave_cliente'] = $contrato['clave_cliente'];
                 $lst_contratos_datos[] = $datos_buque;
-
             }
 
             $this->data['lst_contratos'] = $lst_contratos_datos;
