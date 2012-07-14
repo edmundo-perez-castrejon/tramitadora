@@ -211,6 +211,16 @@
                 </tr>
             </table>
             <!-- <p><a class="btn primary large">Destinos &raquo;</a></p> -->
+            <?php if($dairy_board_report <>''){?>
+
+            <h2>Dairy Board Report</h2>
+            <div id="dairy-board-report">
+                <?php echo $dairy_board_report; ?>
+            </div>
+
+            <?php
+        }
+            ?>
         </div>
 
         </div>

@@ -121,7 +121,20 @@ class Admin extends CI_Controller {
         $this->load->view('template/header',$output);
         $this->load->view('admin/empresas',$output);
         $this->load->view('template/footer');
+    }
 
+    public function dairy_board_report()
+    {
+        $crud = new grocery_CRUD();
+
+        $crud->set_theme('datatables');
+        $crud->set_table('dairy_board_report');
+
+        $output = $crud->render();
+
+        $this->load->view('template/header',$output);
+        $this->load->view('admin/empresas',$output);
+        $this->load->view('template/footer');
     }
 }
 

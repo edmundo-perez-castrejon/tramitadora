@@ -53,5 +53,19 @@ Class Contratos_model extends CI_Model
             return FALSE;
         }
     }
+
+    public function get_dbr($clave_contrato)
+    {
+        $this->load->database();
+
+        $query = $this->db->query("SELECT report FROM dairy_board_report where cve_contrato = '$clave_contrato'");
+
+        if($query->num_rows()>0){
+            $row = $query->result();
+            return $row[0];
+        }else{
+            return FALSE;
+        }
+    }
 }
 //end of file Contratos_model

@@ -119,6 +119,16 @@ class Contratos extends CI_Controller {
         $data['cve_cliente'] = $cve_cliente;
         $data['cve_contrato'] = $cve_contrato;
 
+        #Dairy Board Report
+        $dairy_board_report = $this->contratos_model->get_dbr($cve_contrato);
+
+        if($dairy_board_report)
+        {
+            $data['dairy_board_report'] = $dairy_board_report->report;
+        }else{
+            $data['dairy_board_report'] = '';
+        }
+
 
         if($this->config->item('dev_mode')){
             echo '<pre>';

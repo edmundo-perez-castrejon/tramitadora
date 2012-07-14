@@ -17,6 +17,7 @@
 
     <!-- Le styles -->
     <link href="<?php echo base_url();?>assets/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/tramitadora.css" rel="stylesheet">
 
     <?php
     if(isset($css_files)):
@@ -169,6 +170,9 @@
                         </li>
                         <li>
                             <?php echo anchor('admin/empresas','Empresas');?>
+                        </li>
+                        <li>
+                            <?php echo anchor('admin/dairy_board_report','DairyBoardReport');?>
                         </li>
                         <?php
 
