@@ -36,14 +36,19 @@
 <div class="content">
 <table border=0 width="100%" style="font-size: 15px; text-align: right">
     <tr>
-        <td bgcolor="#dcdcdc" align="right"><b>CLAVE</b></td>
-        <td bgcolor="#dcdcdc" align="right"><b>NOMBRE DE DESTINO</b></td>
+        <td bgcolor="#dcdcdc" style="    width: 50px;    text-align: right;" >
+            <b>CLAVE</b>
+        </td>
+        <td bgcolor="#dcdcdc" style="    text-align: left;    padding-left: 10px;    width: 343px;">
+            <b>NOMBRE DE DESTINO</b>
+        </td>
         <td bgcolor="#dcdcdc" align="right"><b>TRANSPORTISTA</b></td>
         <td bgcolor="#dcdcdc" align="right"><b>CAM./TOL.</b></td>
         <td bgcolor="#dcdcdc" align="right"><b>ORDENADO</b></td>
         <td bgcolor="#dcdcdc" align="right"><b>ENVIADO</b></td>
         <td bgcolor="#dcdcdc" align="right"><b>POR ENVIAR</b></td>
         <td bgcolor="#dcdcdc" align="right"><b>%ENVIADO</b></td>
+        <td bgcolor="#dcdcdc" align="right"><b>SACOS</b></td>
 
     </tr>
     <?php
@@ -51,28 +56,38 @@
     $total_de_salidas_sum = 0;
     $ordenado_sum = 0;
     $por_enviar_sum = 0;
-    foreach($datos_destinos as $destino){
+    $cantidad_sacos_sum = 0;
 
-        $total_de_salidas = $this->salidas_lib->get_peso_total($destino['CLAVE_DESTINO']);
+
+
+
+    foreach($datos_destinos as $destino){
+        $cve_destino = $destino['CLAVE_DESTINO'];
+
+        $total_de_salidas = $this->salidas_lib->get_peso_total($cve_destino);
         $porciento_enviado = ($total_de_salidas)*100/$destino['ORDENADO'];
         $por_enviar = $destino['ORDENADO']-$total_de_salidas;
-        $conteo_salidas = $datos_salidas[$destino['CLAVE_DESTINO']];
-
+        $conteo_salidas = $datos_salidas[$cve_destino];
+        $cantidad_sacos = $datos_sacos[$cve_destino];
 
         $conteo_salidas_sum += $conteo_salidas;
         $total_de_salidas_sum += $total_de_salidas;
         $ordenado_sum += $destino['ORDENADO'];
         $por_enviar_sum += $por_enviar;
+        $cantidad_sacos_sum += $cantidad_sacos;
         ?>
         <tr>
             <td><?php echo $destino['CLAVE_DESTINO']; ?></td>
-            <td><?php echo $destino['NOMBRE_DESTINO']; ?></td>
+            <td style="          text-align: left;    font-size: 11px;">
+                <?php echo $destino['NOMBRE_DESTINO']; ?>
+            </td>
             <td><?php echo $destino['TRANSPORTISTA']; ?></td>
             <td><?php echo number_format($conteo_salidas); ?></td>
             <td><?php echo number_format($destino['ORDENADO']); ?></td>
             <td><?php echo number_format($total_de_salidas);?></td>
             <td><?php echo number_format($por_enviar);?></td>
             <td><?php echo round($porciento_enviado, 2); ?>%</td>
+             <td><?php echo round($cantidad_sacos, 2); ?></td>
         </tr>
         <?php
     }
@@ -85,6 +100,8 @@
         <td><b><?php echo number_format($ordenado_sum); ?></b></td>
         <td><b><?php echo number_format($total_de_salidas_sum);?></b></td>
         <td><b><?php echo number_format($por_enviar_sum)?></b></td>
+        <td><b></b></td>
+         <td><b><?php echo number_format($cantidad_sacos_sum)?></b></td>
         <td>&nbsp;</td>
     </tr>
 </table>

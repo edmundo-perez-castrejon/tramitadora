@@ -86,8 +86,23 @@ class Reportes extends CI_Controller {
         $lst_salidas = array();
         foreach($this->data['datos_destinos'] as $destino){
             $lst_salidas[$destino['CLAVE_DESTINO']] = count($this->salidas_model->get_datos($destino['CLAVE_DESTINO']));
+            $lst_sacos[$destino['CLAVE_DESTINO']] = $this->salidas_model->get_datos($destino['CLAVE_DESTINO']);
         }
         $this->data['datos_salidas'] = $lst_salidas;
+
+        #Sumarizar los sacos por destino
+        $lst_sacos_destinos = array();
+        foreach($this->data['datos_destinos'] as $destino){
+            $sacos_destino = 0;
+            $cve_destino = $destino['CLAVE_DESTINO'];
+            foreach($lst_sacos[$cve_destino] as $sacos){
+                $sacos_destino += $sacos['CANTIDAD_SACOS'];
+            }
+            $lst_sacos_destinos[$cve_destino] = $sacos_destino;
+
+        }
+
+        $this->data['datos_sacos'] = $lst_sacos_destinos;
 
         $html = $this->load->view('reportes/det_destinos', $this->data, true);
         pdf_create_landscape($html, 'Detalle_de_destinos_contrato'.$this->data['datos_buque']['CONTRATO']);
