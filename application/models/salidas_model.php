@@ -18,12 +18,20 @@ Class Salidas_model extends CI_Model
         $this->db_connection->Close();
     }
 
-    public function get_salidas_por_bodega($cve_destino ='')
+    public function get_salidas_por_bodega($cve_destino ='', $fecha = null)
     {
+
+        $this->load->helper('application');
+
         $CadenaSQL = "SELECT CLAVE_BODEGA_DESTINO, SUM(PESO_BRUTO-TARA) AS TOTAL
                         FROM SALIDAS
-                        WHERE DESTINO_SALIDA = '$cve_destino'
-                        GROUP BY CLAVE_BODEGA_DESTINO";
+                        WHERE DESTINO_SALIDA = '$cve_destino' ";
+
+        if($fecha<>null){
+            $CadenaSQL .=" AND FECHA <= #".date_mdy($fecha)."#";
+        }
+
+        $CadenaSQL .= "GROUP BY CLAVE_BODEGA_DESTINO";
 
         $Array_result = array();
 
@@ -47,6 +55,7 @@ Class Salidas_model extends CI_Model
 
         return $Array_result;
     }
+
 
     public function get_datos($cve_destino = '')
     {

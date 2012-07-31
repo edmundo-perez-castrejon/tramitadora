@@ -23,13 +23,13 @@ class Salidas_lib {
         return $suma_peso_bruto;
     }
 
-    public function get_peso_total_bodega($cve_cliente = '', $cve_contrato ='', $cve_bodega = '')
+    public function get_peso_total_bodega($cve_cliente = '', $cve_contrato ='', $cve_bodega = '', $fecha = null)
     {
         $lst_destinos = $this->CI->destinos_model->get_datos($cve_cliente, $cve_contrato);
 
         $suma_bodega = 0;
         foreach($lst_destinos as $destino){
-            $lst_bodegas_destino = $this->CI->salidas_model->get_salidas_por_bodega($destino['CLAVE_DESTINO']);
+            $lst_bodegas_destino = $this->CI->salidas_model->get_salidas_por_bodega($destino['CLAVE_DESTINO'], $fecha);
             foreach($lst_bodegas_destino as $bodega_destino){
                 if($bodega_destino['CLAVE_BODEGA_DESTINO']==$cve_bodega){
                     $suma_bodega += $bodega_destino['TOTAL'];

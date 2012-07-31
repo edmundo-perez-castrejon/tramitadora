@@ -62,7 +62,7 @@ class Admin extends CI_Controller {
             ->display_as('id_empresa','Empresa tratante')
             ->display_as('claves','Contratos');
 
-        #Relacino con la empresa
+        #Relacion con la empresa
         $crud->set_relation('id_empresa','empresas','nombre');
 
         $output = $crud->render();

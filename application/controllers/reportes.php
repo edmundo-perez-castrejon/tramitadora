@@ -75,8 +75,10 @@ class Reportes extends CI_Controller {
         #$data['peso_bruto_total'] = $this->salidas_lib->get_peso_total($this->cve_destino);
 
         $html = $this->load->view('reportes/det_envios', $this->data, true);
-        pdf_create_landscape($html, 'Detalle_de_envios_contrato'.$this->data['datos_buque']['CONTRATO']);
-        #$this->load->view('reportes/det_envios', $this->data);
+
+
+        #pdf_create_landscape($html, 'Detalle_de_envios_contrato'.$this->data['datos_buque']['CONTRATO']);
+        $this->load->view('reportes/det_envios', $this->data);
     }
 
     public function det_destinos()
@@ -169,6 +171,26 @@ class Reportes extends CI_Controller {
         }
 
 
+    }
+
+    public function cortes(){
+        $data['fecha'] = $this->input->get_post('fecha', TRUE);
+        $cve_contrato = $this->input->get_post('ct', TRUE);
+        $cve_cliente = $this->input->get_post('cl', TRUE);
+        //
+
+        $datos_buque = $this->buques_model->get_datos($cve_contrato);
+        $datos_bodegas = $this->bodegas_model->get_datos($cve_contrato);
+
+        $data['datos_buque'] = $datos_buque;
+        $data['datos_bodegas'] = $datos_bodegas;
+
+        $data['cve_cliente'] = $cve_cliente;
+        $data['cve_contrato'] = $cve_contrato;
+
+        $html = $this->load->view('cortes/corte', $data, true);
+
+        pdf_create($html, 'corte'.str_replace('/','-', $data['fecha']));
     }
 
     public function under_construction()

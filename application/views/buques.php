@@ -74,10 +74,19 @@
                 <li><?php echo anchor('reportes/det_transportes','Det. de Transporte');?></li>
 
             </ul>
+
+            <h5>Cortes</h5>
+            <?php echo form_open("reportes/cortes",array("method"=>"POST"));?>
+                <input class="input-small" type="text" placeholder="dd/mm/YY" id="fecha" name="fecha" value="<?php echo date('d/m/Y');?>">
+                <input type='hidden' name='ct' value='<?php echo $ct; ?>'>
+                <input type='hidden' name='cl' value='<?php echo $cl; ?>'>
+                <button class="btn success" type="submit">consultar</button>
+            </form>
         </div>
         <?php
         if(isset($imagen_buque)){
             ?>
+
                 <div class="well">
 
                     <a rel="lightbox" href="<?php echo $imagen_buque;?>">
