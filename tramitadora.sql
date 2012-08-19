@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.9
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 18-08-2012 a las 17:18:55
--- Versión del servidor: 5.5.8
--- Versión de PHP: 5.3.5
+-- Tiempo de generación: 19-08-2012 a las 14:37:52
+-- Versión del servidor: 5.5.24-log
+-- Versión de PHP: 5.3.13
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -33,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `claves` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=959 ;
 
 --
--- Volcar la base de datos para la tabla `claves`
+-- Volcado de datos para la tabla `claves`
 --
 
 INSERT INTO `claves` (`id_clave`, `clave`, `contrato`) VALUES
@@ -111,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `claves_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcar la base de datos para la tabla `claves_users`
+-- Volcado de datos para la tabla `claves_users`
 --
 
 INSERT INTO `claves_users` (`id_clave`, `id`) VALUES
@@ -158,11 +159,11 @@ CREATE TABLE IF NOT EXISTS `configuracion` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Volcar la base de datos para la tabla `configuracion`
+-- Volcado de datos para la tabla `configuracion`
 --
 
 INSERT INTO `configuracion` (`id`, `imagen_frontal`) VALUES
-(3, 'FONDO.jpg');
+(3, 'bcc2e-escudoarmascolima.PNG');
 
 -- --------------------------------------------------------
 
@@ -178,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `dairy_board_report` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
--- Volcar la base de datos para la tabla `dairy_board_report`
+-- Volcado de datos para la tabla `dairy_board_report`
 --
 
 INSERT INTO `dairy_board_report` (`id`, `cve_contrato`, `report`) VALUES
@@ -200,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `empresas` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Volcar la base de datos para la tabla `empresas`
+-- Volcado de datos para la tabla `empresas`
 --
 
 INSERT INTO `empresas` (`id_empresa`, `nombre`, `imagen`) VALUES
@@ -221,7 +222,7 @@ CREATE TABLE IF NOT EXISTS `groups` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Volcar la base de datos para la tabla `groups`
+-- Volcado de datos para la tabla `groups`
 --
 
 INSERT INTO `groups` (`id`, `name`, `description`) VALUES
@@ -241,7 +242,7 @@ CREATE TABLE IF NOT EXISTS `imagenes_contratos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcar la base de datos para la tabla `imagenes_contratos`
+-- Volcado de datos para la tabla `imagenes_contratos`
 --
 
 INSERT INTO `imagenes_contratos` (`clave_contrato`, `imagen`) VALUES
@@ -250,6 +251,26 @@ INSERT INTO `imagenes_contratos` (`clave_contrato`, `imagen`) VALUES
 ('IMP-03', '8ea45-IMG_0470.JPG'),
 ('NIT-03', '73f43-SAM_1261.jpg'),
 ('YAR-01', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `muelles`
+--
+
+CREATE TABLE IF NOT EXISTS `muelles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `archivo` varchar(254) NOT NULL,
+  `nombre` varchar(254) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `muelles`
+--
+
+INSERT INTO `muelles` (`id`, `archivo`, `nombre`) VALUES
+(1, 'TramitaMZO.mde', 'Manzanillo');
 
 -- --------------------------------------------------------
 
@@ -281,16 +302,16 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
 
 --
--- Volcar la base de datos para la tabla `users`
+-- Volcado de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`, `id_empresa`, `superusuario`) VALUES
 (1, 2130706433, 'administrador', '24359', '1234567890', 'admin@admin.com', '', '', '', 1268889823, 1345240245, 1, 'Jose Luis ', 'Diaz', 'ADMIN', '0', 1, 1),
-(17, 2130706433, 'root', 'toor', NULL, 'ing.edmundo@gmail.com', NULL, NULL, NULL, 1268889823, 1343694209, 1, NULL, NULL, NULL, NULL, 1, 1),
+(17, 2130706433, 'root', 'toor', NULL, 'ing.edmundo@gmail.com', NULL, NULL, NULL, 1268889823, 1345386395, 1, NULL, NULL, NULL, NULL, 1, 1),
 (20, 0, 'IMPALA', 'impalamzo', NULL, '', NULL, NULL, NULL, 0, 1344461124, 1, 'MARTIN', 'HERNANDEZ', NULL, NULL, 2, 1),
 (22, 0, 'KARLAJ', '1704', NULL, '', NULL, NULL, NULL, 0, 1343763138, 1, 'KARLA ', 'JIMENEZ', NULL, NULL, 2, 1),
 (24, 0, 'disagro', 'kds93Kyus', NULL, '', NULL, NULL, NULL, 0, 1344733894, 1, 'SAUL', 'MARTINEZ', NULL, NULL, 1, 1),
-(25, 0, 'MLEPEZ', 'COLIMA97', NULL, '', NULL, NULL, NULL, 0, 1345225443, 1, 'MARTIN', 'LEPEZ', NULL, NULL, 1, 1),
+(25, 0, 'MLEPEZ', 'COLIMA97', NULL, '', NULL, NULL, NULL, 0, 1345386533, 1, 'MARTIN', 'LEPEZ', NULL, NULL, 1, 1),
 (26, 0, 'PICHARDINE', 'MANZANILLO', NULL, 'Claudio.Pichardine@yara.com', NULL, NULL, NULL, 0, 1336923374, 1, NULL, NULL, NULL, NULL, 1, 1),
 (28, 0, 'DUCORAGRO', 'MANZANILLO', NULL, '', NULL, NULL, NULL, 0, 1335997020, 1, 'DUCORAGRO', '', NULL, NULL, 1, 1),
 (29, 0, 'OMAGRO', 'OMAZLO', NULL, '', NULL, NULL, NULL, 0, 1344016549, 1, 'JAVIER', 'MORENO', NULL, NULL, 1, 1),
@@ -315,7 +336,7 @@ CREATE TABLE IF NOT EXISTS `users_groups` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
--- Volcar la base de datos para la tabla `users_groups`
+-- Volcado de datos para la tabla `users_groups`
 --
 
 INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
@@ -323,3 +344,7 @@ INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
 (2, 1, 2),
 (5, 17, 1),
 (6, 17, 2);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
