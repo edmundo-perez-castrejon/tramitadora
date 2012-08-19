@@ -19,6 +19,12 @@ Class Contratos_model extends CI_Model
         $this->db_connection->Close();
     }
 
+    public function get_clientes_by_contrato($clave_contrato = '')
+    {
+        $rs = $this->db_connection->execute("SELECT * FROM CLIENTES WHERE CONTRATO_CLIENTE = '$clave_contrato'");
+        return make_array_result($rs);
+    }
+
     public function get_contratos_by_cliente($clave_cliente = '')
     {
 
